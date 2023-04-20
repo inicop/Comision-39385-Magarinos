@@ -84,7 +84,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, rgba(44, 44, 44, 0.5), rgba(54, 54, 54, 0.5)), url(../asset/img/portada.jpg);
+    background: linear-gradient(to right, rgba(44, 44, 44, 0.5), #36363680), url(../asset/img/portada.jpg);
     background-size: cover;
     background-position: center center;
 
