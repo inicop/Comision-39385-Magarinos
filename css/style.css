@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
 .heroIndex {
     width: 100%;
     height: 100%;
@@ -76,13 +77,7 @@ header div {
     list-style: none;
 }
 
-.enlace img {
-    margin-top: 3px;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: bottom; 
-}
+
 
 .navbar li a:hover {
     color: rgb(84, 137, 223);
@@ -237,6 +232,7 @@ main div h2 {
 
 
 }
+
 /* Empieza el footer =================================================================*/
 .footer {
     background-color: #ccd2db;
@@ -604,12 +600,183 @@ main {
 .contDescCompleta {
     border: #344f79 solid 1px;
     color: #344f79;
-    height: 400px;
+    height: auto;
     text-align: left;
     border-radius: 5px;
 
 }
 
+.contDescCompleta p {
+    height: auto;
+
+}
+
 .contDescCompleta div p {
     font-size: auto;
+}
+
+
+
+/* ==============================================MEDIA QUERY=========================================== */
+
+/* INDEX */
+
+@media(max-width:768px) {
+
+    #buscador {
+        width: 400px;
+    }
+
+    .texto h1 {
+        font-size: 14px;
+    }
+
+    .enlace img {
+        width: 200px;
+    }
+
+    .inicio li a {
+        font-size: 12px;
+    }
+
+    .inicio {
+        display: none;
+    }
+
+    .navbar li {
+        font-size: 14px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+
+    .contacto li a img {
+        width: 20px;
+    }
+
+    .seguinos li a img {
+        width: 20px;
+    }
+
+}
+
+
+@media(max-width:425px) {
+
+    #buscador {
+        width: 300px;
+    }
+
+    .contenedor {
+        height: 100vh;
+    }
+
+    .texto h1 {
+        font-size: 14px;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    .navbar li {
+        font-size: 12px;
+        margin: 5px;
+    }
+
+    .inicio {
+        display: none;
+    }
+
+    .enlace img {
+        width: 200px;
+
+    }
+
+    .derechos h2 {
+        font-size: 10px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+    }
+
+    .contacto li a img {
+        width: 20px;
+    }
+
+    .seguinos li a img {
+        width: 20px;
+    }
+
+    .phone li img {
+        width: 20px;
+    }
+
+}
+
+
+@media(max-width:375px) {
+    .card {
+        height: 200px;
+        width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .leyenda {
+        height: 100px;
+
+    }
+
+    /* Desc */
+    .leyenda h3 {
+        margin: -3px;
+        font-size: 11px;
+
+    }
+
+    /*Tipo (Alquiler o venta)*/
+    .leyenda h4 {
+        margin-top: 4px;
+        font-size: 10px;
+        color: rgb(52, 79, 121);
+    }
+
+    /*Ubicacion*/
+    .leyenda h5 {
+        margin: 2px;
+        font-size: 10x;
+
+
+    }
+
+    /*Costo*/
+    .leyenda a {
+        font-size: 16px;
+        text-decoration: solid;
+        text-decoration: none;
+        color: #fff;
+        background-color: #344f79;
+        height: 90%;
+        border-radius: 5px;
+        padding: 2px 2px;
+
+
+    }
+
+
+
+    @media(max-width:320px) {
+
+        .navbar li {
+            font-size: 10px;
+        }
+
+    }
 }
