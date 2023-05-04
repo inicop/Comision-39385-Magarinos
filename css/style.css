@@ -50,7 +50,8 @@
 
 .navbar li a {
     text-decoration: none;
-    color: #344f79
+    color: #344f79;
+    align-items: center;
 }
 
 
@@ -357,7 +358,7 @@ main div h2 {
 }
 
 /* Comienza HTML Contacto con nosotros =======================================================================*/
-.formContacto {
+/* .formContacto {
     width: 400px;
     padding: 30px;
     border: #344f79 solid 1px;
@@ -428,7 +429,7 @@ main div h2 {
 
 .botonContactar:hover {
     background-color: #6b778a;
-}
+} */
 
 main {
     align-items: center;
@@ -615,7 +616,14 @@ main {
     font-size: auto;
 }
 
+ul{
+    list-style: none;
+}
 
+a{
+    text-decoration: none;
+    color: dark;
+}
 
 /* ==============================================MEDIA QUERY=========================================== */
 
@@ -635,9 +643,6 @@ main {
         width: 200px;
     }
 
-    .inicio li a {
-        font-size: 12px;
-    }
 
     .inicio {
         display: none;
@@ -684,8 +689,7 @@ main {
     }
 
     .navbar li {
-        font-size: 12px;
-        margin: 5px;
+        font-size: 12;
     }
 
     .inicio {
@@ -766,7 +770,6 @@ main {
         height: 90%;
         border-radius: 5px;
         padding: 2px 2px;
-
 
     }
 
