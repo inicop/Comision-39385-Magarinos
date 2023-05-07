@@ -16,7 +16,8 @@
     grid-template-areas:
         "header"
         "main"
-        "footer";
+        "footer"
+    ;
 }
 
 /* Empieza el header =================================================================*/
@@ -25,7 +26,7 @@
     grid-area: header;
     display: grid;
     align-items: center;
-    grid-template-columns: 0.3fr auto 0.2fr;
+    grid-template-columns: 16rem auto 7rem;
     grid-template-rows: auto;
     grid-template-areas:
         "enlace navbar inicio"
@@ -34,8 +35,13 @@
 
 .enlace {
     grid-area: enlace;
-    width: auto;
+    width: 100%;
+    justify-items: center;
+}
 
+.enlace img {
+    width: 100%;
+    
 }
 
 .navbar {
@@ -52,6 +58,7 @@
     text-decoration: none;
     color: #344f79;
     align-items: center;
+    font-size: 1rem;
 }
 
 
@@ -302,6 +309,7 @@ main div h2 {
 
 .seguinos li a img {
     width: 30px;
+    color: greenyellow;
 }
 
 .contacto li a img:hover {
@@ -458,10 +466,16 @@ main {
 .enlinea {
     width: 100%;
     gap: 20px;
+    margin:10px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-color: black solid 3px;
+    flex-wrap: wrap;
+}
+
+.enlinea img{
+    margin: 5px;
 }
 
 .enlinea p {
@@ -616,11 +630,11 @@ main {
     font-size: auto;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: dark;
 }
@@ -629,32 +643,26 @@ a{
 
 /* INDEX */
 
-@media(max-width:768px) {
+@media(max-width:1024px) {
+
+    .enlace {
+        width: auto;
+    }
+
 
     #buscador {
         width: 400px;
     }
 
     .texto h1 {
-        font-size: 14px;
+        font-size: 1rem;
     }
 
-    .enlace img {
-        width: 200px;
+    .navbar li a {
+        font-size: 1rem;
+        font-weight: 400;
     }
 
-
-    .inicio {
-        display: none;
-    }
-
-    .navbar li {
-        font-size: 14px;
-    }
-
-    .footer {
-        font-size: 14px;
-    }
 
     .contacto li a img {
         width: 20px;
@@ -666,19 +674,10 @@ a{
 
 }
 
-
-@media(max-width:425px) {
+@media(max-width:768px) {
 
     #buscador {
-        width: 300px;
-    }
-
-    .contenedor {
-        height: 100vh;
-    }
-
-    .texto h1 {
-        font-size: 14px;
+        width: 400px;
     }
 
     .header {
@@ -688,18 +687,81 @@ a{
         justify-content: center;
     }
 
-    .navbar li {
-        font-size: 12;
+    .texto h1 {
+        font-size: 1rem;
+    }
+
+    .enlace img {
+        margin: 5px;
+        width: 307px;
+        height: 70px;
+
+    }
+
+    .enlace {
+        width: 307px;
+        align-items: center;
     }
 
     .inicio {
         display: none;
     }
 
-    .enlace img {
-        width: 200px;
-
+    .navbar li a {
+        font-size: 1rem;
+        font-weight: 600;
     }
+
+    .header {
+        font-size: 1rem;
+    }
+
+
+    .contacto li a img {
+        width: 20px;
+    }
+
+    .seguinos li a img {
+        width: 20px;
+    }
+
+    .enlinea p {
+        
+        width: 70%;
+        text-align: center;
+        
+    }
+
+}
+
+
+@media(max-width:425px) {
+
+    #buscador {
+        width: 20rem;
+    }
+
+    .contenedor {
+        height: 100vh;
+    }
+
+    .texto h1 {
+        font-size: 0.8rem;
+    }
+
+
+
+    .navbar li a {
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+
+
+    .inicio {
+        display: none;
+    }
+
 
     .derechos h2 {
         font-size: 10px;
@@ -723,6 +785,13 @@ a{
         width: 20px;
     }
 
+    .enlinea p {
+        
+        width: 90%;
+        text-align: center;
+        
+    }
+
 }
 
 
@@ -733,7 +802,7 @@ a{
         margin-bottom: 20px;
     }
 
-    .leyenda {
+    .bus .leyenda {
         height: 100px;
 
     }
@@ -756,8 +825,10 @@ a{
     .leyenda h5 {
         margin: 2px;
         font-size: 10x;
+    }
 
-
+    #buscador {
+        width: 15rem;
     }
 
     /*Costo*/
@@ -770,16 +841,25 @@ a{
         height: 90%;
         border-radius: 5px;
         padding: 2px 2px;
+    }
 
+    .texto h1 {
+        font-size: 0.6rem;
     }
 
 
+}
 
-    @media(max-width:320px) {
 
-        .navbar li {
-            font-size: 10px;
-        }
+@media(max-width:320px) {
 
+    .navbar li a {
+        font-size: 0.6rem;
     }
+
+    .texto h1 {
+        font-size: 0.55rem;
+    }
+
+
 }
