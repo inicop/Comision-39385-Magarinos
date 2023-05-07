@@ -15,7 +15,7 @@
 
 
 <body>
-    <header class="container-fluid text-center">
+    <!--<header class="container-fluid text-center">
         <div class="row align-items-center justify-content-center">
             <div class="col-3">
                 <a class="x" href="../index.html">
@@ -37,12 +37,63 @@
                 </ul>
             </div>
         </div>
+
+    </header> -->
+    <!-- ================================================================================================================ -->
+    <header class="m-0 p-0">
+
+        <nav class="navbar navbar-expand-lg">
+
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../asset/img/LOGO.png" class="img-fluid" alt="Logo Web">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-0 mb-2 mb-lg-0">
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="../pages/comprar.html">Comprar</a>
+                        </li>
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="../pages/alquilar.html"> Alquilar</a>
+                        </li>
+
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="../pages/vender.html">Vender</a>
+                        </li>
+
+
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                        </li>
+
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="../pages/tabajaConNosotros.html">Trabaja con nosotros</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Iniciar Sesión</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
     </header>
+
+    <!-- ================================================================================================================ -->
+
 
     <main>
         <div class="container">
 
-            <form class="row g-3 mt-3 w-50 mx-auto">
+            <form class="row g-3 mt-3 w-10 mx-auto border border-1 rounded-1 p-2">
 
                 <div class="col-12">
                     <label for="nombreInput" class="form-lable">Nombre</label>
@@ -75,15 +126,12 @@
                         <input type="checkbox" id="terminosCondiciones" class="form-check-iput">
                         Acepto los términos y condiciones
                     </div>
-
                 </div>
 
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary"> Enviar
                         <a href="../index.html"></a>
                     </button>
-
-
                 </div>
 
             </form>
@@ -91,8 +139,57 @@
 
     </main>
 
-    <footer>
-
+    <footer class="footer">
+        <div>
+            <h3>Contacto</h3>
+            <ul class="contacto">
+                <li>
+                    <a href="https://www.gmail.com/" target="_blank">
+                        <img src="../asset/icons/email.svg" alt="Email">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wa.me/59899944020/?text=Escribinos%20tu%20consulta." target="_blank">
+                        <img src="../asset/icons/whatsapp.svg" alt="whatsapp">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h3>Teléfono </h3>
+            <ul class="phone">
+                <li>
+                    <img src="../asset/icons/phone.svg" alt="Phone">
+                </li>
+                <li>
+                    <strong>(+598) 99 944020</strong>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h3>Síguenos</h3>
+            <ul class="seguinos">
+                <li>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <img src="../asset/icons/linkedin.svg" alt="Lnkedin">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="../asset/icons/instagram.svg" alt="Instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="../asset/icons/facebook.svg" alt="Facebook">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="derechos">
+            <h2>© 2023 TechJump - Todos los derechos reservados. Consulta nuestros Términos y Condiciones y
+                Política de Privacidad para obtener más información.</h2>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
