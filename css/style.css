@@ -19,7 +19,7 @@
         "footer";
 }
 
-/* Empieza el header =================================================================*/
+/* Empieza el header ================================================================= y se viene SASS y se terminan los comentarios, jeje! */
 .header {
     background-color: #ffffff;
     grid-area: header;
