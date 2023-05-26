@@ -13,7 +13,6 @@
 </head>
 
 
-
 <body>
     <!--<header class="container-fluid text-center">
         <div class="row align-items-center justify-content-center">
@@ -93,32 +92,32 @@
     <main>
         <div class="container">
 
-            <form class="row g-3 mt-3 w-10 mx-auto border border-1 rounded-1 p-2">
+            <form action="https://formsubmit.co/pizarro.dn@gmail.com" method="POST" class="row g-3 mt-3">
 
                 <div class="col-12">
                     <label for="nombreInput" class="form-lable">Nombre</label>
-                    <input type="text" class="form-control" id="nombreInput" placeholder="Nicolas">
+                    <input type="text" class="form-control" id="nombreInput" placeholder="Nombre" name="Nombre">
                 </div>
 
                 <div class="col-12">
                     <label for="apellidoInput" class="form-lable">Apellido</label>
-                    <input type="text" class="form-control" id="apellidoInput" placeholder="Perez">
+                    <input type="text" class="form-control" id="apellidoInput" placeholder="Apellido" name="Apellido">
                 </div>
 
                 <div class="col-12">
                     <label for="telefonoInput" class="form-lable">Teléfono</label>
-                    <input type="text" class="form-control" id="telefonoInput" placeholder="598-99944020">
+                    <input type="text" class="form-control" id="telefonoInput" placeholder="Teléfono" name="Telefono">
                 </div>
 
                 <div class="col-12 mb-30">
                     <label for="e-mail" class="form-lable">Email</label>
-                    <input type="text" class="form-control" id="e-mail" placeholder="nombre@ejemplo.com">
+                    <input type="e-mail" class="form-control" id="e-mail" placeholder="Escribe tu email" name="Email>
                 </div>
 
                 <div class="col-12">
                     <label for="motivoContacto">Motivo de contacto</label>
                     <textarea class="form-control" placeholder="Comentarios..." id="motivoContacto"
-                        style="height: 200px"></textarea>
+                        style="height: 200px" name="Motivo"></textarea>
                 </div>
 
                 <div class="col-12">
@@ -129,10 +128,14 @@
                 </div>
 
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary"> Enviar
-                        <a href="../index.html"></a>
-                    </button>
+                    <button type="submit" class="btn btn-primary"> Enviar</button>
+                    <input type="hidden" name="_next" value= "http://127.0.0.1:5500/index.html">
+                    <input type="hidden" name="_captcha" value="false">
+                
                 </div>
+
+                
+                
 
             </form>
         </div>

@@ -1,0 +1,109 @@
+main {
+    border-style: solid none none none;
+    border-color: #344f79;
+    border-width: 1px;
+
+    grid-area: main;
+
+    .contenedor {
+        .contBuscador {
+            #buscardor {}
+
+            .texto {
+                h1 {}
+            }
+        }
+    }
+
+    div {
+        h2 {}
+
+    }
+
+    .box {
+        height: auto;
+        width: 100%;
+        @include flex(row, wrap, center, none);
+        gap: 40px 30px;
+
+        .card {
+            @include flex(column, nowrap, none, center);
+            height: 300px;
+            width: 300px;
+            border-radius: 10px;
+            border: grey solid 0.1px;
+
+
+            .imgCard {
+                font-family: $typo-secundaria;
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                border-radius: 10px 10px 0 0;
+
+            }
+
+            .leyenda {
+                height: 200px;
+                width: 100%;
+                text-align: center;
+                font-family: $typo-secundaria;
+
+                h3 {
+                    // DESC
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-decoration: double;
+                    color: #344f79;
+                    padding: 5px 0 5px 0;
+
+                }
+
+                h4 {
+                    //TIPO OPERACION
+                    font-size: 12px;
+                    color: white;
+                    margin: 1px 20px;
+                    padding: 2px 2px 5px 5px;
+                    border-radius: 5px 5px 7px 7px;
+                    background-color: #344f79;
+
+                }
+
+                h5 {
+                    // barrio
+                    font-size: 10px;
+                    color: white;
+                    background-color: $color-base;
+                    margin: 3px 40px;
+                    border-radius: 5px 5px 8px 8px;
+
+                    padding: 2px 2px 5px 5px;
+
+
+                }
+
+                a {
+
+                    font-style: bold;
+                    text-decoration: none;
+                    color: white;
+                    font-weight: bolder;
+                    background-color: $color-base;
+                    padding: 1px 5px 1px 5px;
+                    border-radius: 5px 5px 10px 10px;
+
+                }
+
+            }
+
+            &:hover {
+
+                border: #344f79 solid 3px;
+                transform: scale(1.05, 1.05);
+                transition: 5ms;
+            }
+
+        }
+    }
+}

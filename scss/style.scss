@@ -1,0 +1,8 @@
+@import "./utilities/variables"; //siempre se declara primero
+@import "./utilities/mixins";
+@import "./base/reset";
+@import "./base/typo";
+@import "./layout/index/hero";
+@import "./layout/header";
+@import "./layout/main-index";
+@import "./layout/footer";

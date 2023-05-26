@@ -1,0 +1,7 @@
+.heroIndex {
+    width: 100%;
+    height: 100%;
+    @include grid(100%, auto auto auto, none, none, "header" "main" "footer");
+}
+
+//@mixin grid($col, $row, $justify, $align, $area){
