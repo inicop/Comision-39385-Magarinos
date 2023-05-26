@@ -1,0 +1,44 @@
+    header {
+        grid-area: header;
+        @include grid(0.3fr auto 0.2fr, auto,space-between, center, "enlace navbar inicio");
+        background-color: #ffffff;
+        font-family: $typo-secundaria;
+
+        div {
+            a {
+                img {}
+            }
+        }
+
+        nav {
+            ul {
+                @include flex(row, nowrap, space-between, center);
+                gap: 25px;
+
+                li {
+                    list-style: none;
+
+                    a {
+                        text-decoration: none;
+                        color: $color-base;
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+
+        div {
+            ul {
+                li {
+                    list-style: none;
+
+                    a {
+                        text-decoration: none;
+                        color: $color-base;
+                        font-size: .9rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }

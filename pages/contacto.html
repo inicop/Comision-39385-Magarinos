@@ -11,27 +11,6 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<!-- <header class="header">
-    <div>
-        <a class="enlace" href="../index.html">
-            <img src="../asset/img/LOGO.png" alt="Logo Web">
-        </a>
-    </div>
-    <nav>
-        <ul class=" navbar">
-            <li><a href="../pages/comprar.html">Comprar</a></li>
-            <li><a href="../pages/alquilar.html">Alquilar</a></li>
-            <li><a href="../pages/vender.html">Vender</a></li>
-            <li><a href="../pages/contacto.html">Contacto</a></li>
-            <li><a href="../pages/tabajaConNosotros.html">Trabajá con nosotros</a></li>
-        </ul>
-    </nav>
-    <div>
-        <ul class="inicio">
-            <li><a href="../pages/tabajaConNosotros.html">Iniciar Sesión</a></li>
-        </ul>
-    </div>
-</header> -->
 
 <body>
     <header class="container-fluid text-center">
@@ -61,32 +40,32 @@
     <main>
         <div class="container">
 
-            <form class="row g-3 mt-3">
+            <form action="https://formsubmit.co/pizarro.dn@gmail.com" method="POST" class="row g-3 mt-3">
 
                 <div class="col-12">
                     <label for="nombreInput" class="form-lable">Nombre</label>
-                    <input type="text" class="form-control" id="nombreInput" placeholder="Nombre">
+                    <input type="text" class="form-control" id="nombreInput" placeholder="Nombre" name="Nombre">
                 </div>
 
                 <div class="col-12">
                     <label for="apellidoInput" class="form-lable">Apellido</label>
-                    <input type="text" class="form-control" id="apellidoInput" placeholder="Apellido">
+                    <input type="text" class="form-control" id="apellidoInput" placeholder="Apellido" name="Apellido">
                 </div>
 
                 <div class="col-12">
                     <label for="telefonoInput" class="form-lable">Teléfono</label>
-                    <input type="text" class="form-control" id="telefonoInput" placeholder="Teléfono">
+                    <input type="text" class="form-control" id="telefonoInput" placeholder="Teléfono" name="Telefono">
                 </div>
 
                 <div class="col-12 mb-30">
                     <label for="e-mail" class="form-lable">Email</label>
-                    <input type="text" class="form-control" id="e-mail" placeholder="Escribe tu email">
+                    <input type="e-mail" class="form-control" id="e-mail" placeholder="Escribe tu email" name="Email>
                 </div>
 
                 <div class="col-12">
                     <label for="motivoContacto">Motivo de contacto</label>
                     <textarea class="form-control" placeholder="Comentarios..." id="motivoContacto"
-                        style="height: 200px"></textarea>
+                        style="height: 200px" name="Motivo"></textarea>
                 </div>
 
                 <div class="col-12">
@@ -99,9 +78,13 @@
 
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary"> Enviar</button>
-
-
+                    <input type="hidden" name="_next" value= "http://127.0.0.1:5500/index.html">
+                    <input type="hidden" name="_captcha" value="false">
+                
                 </div>
+
+                
+                
 
             </form>
         </div>

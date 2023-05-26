@@ -1,0 +1,28 @@
+@mixin flex ($direction, $wrap, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+
+}
+
+/*EJEMPLO DE APLICACIÓN: En el header por ejemplo, o footer, o donde queramos:
+@include flex(row,wrap,center,center);    // asi se llamaal mixin desde una sass
+*/
+
+@mixin grid($col, $row, $justify, $align, $area){
+    display: grid;
+    grid-template-columns: $col;
+    grid-template-rows: $row;
+    justify-content: $justify;
+    align-items: $align;
+    grid-template-areas: $area;
+}
+
+/*EJEMPLO DE APLICACIÓN: En el header por ejemplo, o footer, o donde queramos:
+@include grid(repeat(3,1fr),repeat(5,1), center, center, "h1 h1 h1" "h2 h2 h2" "col col col");    // asi se llamaal mixin desde una sass
+*/
+
+/*EJEMPLO DE APLICACIÓN: "none" es para no asignar valor a esa variable 
+*/

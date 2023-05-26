@@ -1,0 +1,86 @@
+footer {
+    margin-top: 100px;
+    background-color: $footer_color;
+    grid-area: footer;
+    font-family: $typo-secundaria;
+
+    @include grid(repeat(3, 1fr), 1fr .5fr, center, center, "contacto tel seguinos" "derechos derechos derechos");
+
+    div {
+        h3 {
+            color: $footer_color;
+            padding: 8px;
+            text-align: center;
+            margin: 15px 5px;
+            background-color: #344f79;
+            border-radius: 10px;
+        }
+
+        .contacto {
+            grid-area: contacto;
+            @include flex(row, wrap, center, center);
+
+            li {
+                list-style: none;
+                p {
+                    color: $color-base;
+                }
+            }
+        }
+    }
+
+    div {
+        h3 {}
+
+        .phone {
+            grid-area: tel;
+            @include flex(row, wrap, center, center);
+
+            li {
+                list-style: none;
+
+                p {
+                    color: $color-base;
+                    font-weight: 600;
+                }
+
+                img {
+                    width: 40px;
+                }
+            }
+        }
+    }
+
+    div {
+        h3 {}
+
+        .seguinos {
+            grid-area: seguinos;
+            @include flex(row, wrap, center, center);
+
+            li {
+                list-style: none;
+            }
+        }
+    }
+
+    .derechos {
+        grid-area: derechos;
+
+        p {
+            text-align: center;
+            color: $color-base;
+            font-weight: 400;
+        }
+    }
+
+    .icono-footer {
+        width: 40px;
+        &:hover {
+            transform: scale(1.05, 1.05);
+            /* transition: 0.3s; */
+        }
+
+    }
+
+}
