@@ -4,6 +4,10 @@ header {
     background-color: #ffffff;
     font-family: $typo-secundaria;
 
+    .enlace img{
+        width:30px;
+        height: 10px;
+    }
 
     .enlace img:hover {
         transform: scale(1.02, 1.02);
