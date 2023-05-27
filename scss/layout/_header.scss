@@ -1,5 +1,9 @@
 header {
     grid-area: header;
+    //border-style: none none none solid;
+    //border-color: #344f79;
+    //border-width: 1px;
+
     @include grid(0.3fr auto 0.2fr, auto, space-between, center, "enlace navbar inicio");
     background-color: #ffffff;
     font-family: $typo-secundaria;
@@ -26,7 +30,7 @@ header {
                     text-decoration: none;
                     color: $color-base;
                     font-size: .9rem;
-                    &h
+                    
                 }
 
             }
