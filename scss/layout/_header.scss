@@ -1,44 +1,55 @@
-    header {
-        grid-area: header;
-        @include grid(0.3fr auto 0.2fr, auto,space-between, center, "enlace navbar inicio");
-        background-color: #ffffff;
-        font-family: $typo-secundaria;
+header {
+    grid-area: header;
+    @include grid(0.3fr auto 0.2fr, auto, space-between, center, "enlace navbar inicio");
+    background-color: #ffffff;
+    font-family: $typo-secundaria;
 
-        div {
-            a {
-                img {}
-            }
-        }
 
-        nav {
-            ul {
-                @include flex(row, nowrap, space-between, center);
-                gap: 25px;
+    .enlace img:hover {
+        transform: scale(1.02, 1.02);
+        transition: 0, 1ms;
+    }
 
-                li {
-                    list-style: none;
+    nav {
+        ul {
+            @include flex(row, nowrap, space-between, center);
+            gap: 25px;
 
-                    a {
-                        text-decoration: none;
-                        color: $color-base;
-                        font-size: .9rem;
-                    }
+            li {
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    color: $color-base;
+                    font-size: .9rem;
+                    &h
                 }
+
             }
         }
+    }
 
-        div {
-            ul {
-                li {
-                    list-style: none;
+    div {
+        ul {
+            li {
+                list-style: none;
 
-                    a {
-                        text-decoration: none;
-                        color: $color-base;
-                        font-size: .9rem;
-                        font-weight: 700;
-                    }
+                a {
+                    text-decoration: none;
+                    color: $color-base;
+                    font-size: .9rem;
+                    font-weight: 700;
                 }
             }
         }
     }
+
+    .navbar li a:hover {
+        color: rgb(84, 137, 223);
+    }
+
+
+    .inicio li a:hover {
+        color: rgb(58, 97, 160);
+    }
+}

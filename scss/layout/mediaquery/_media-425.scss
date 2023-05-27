@@ -1,0 +1,57 @@
+@media(max-width:425px) {
+
+    #buscador {
+        width: 300px;
+    }
+
+    .contenedor {
+        height: 100vh;
+    }
+
+    .texto h1 {
+        font-size: 14px;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    .navbar li {
+        font-size: 12;
+    }
+
+    .inicio {
+        display: none;
+    }
+
+    .enlace img {
+        width: 200px;
+
+    }
+
+    .derechos h2 {
+        font-size: 10px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+    }
+
+    .contacto li a img {
+        width: 20px;
+    }
+
+    .seguinos li a img {
+        width: 20px;
+    }
+
+    .phone li img {
+        width: 20px;
+    }
+
+}
