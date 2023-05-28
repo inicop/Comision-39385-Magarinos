@@ -1,7 +1,9 @@
 .heroIndex {
     width: 100%;
     height: 100%;
-    @include grid(30%, auto auto auto, none, none, "header" "main" "footer");
+    @include grid(80%, auto auto auto, none, none, "header" "main" "footer");
+    justify-content: center;
+    align-items: center;
 }
 
 //@mixin grid($col, $row, $justify, $align, $area){

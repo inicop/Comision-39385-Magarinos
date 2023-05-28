@@ -12,15 +12,20 @@
         font-size: 14px;
     }
 
-    .header {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: center;
+    .heroIndex {
+        @include grid(95%, auto auto auto, none, none, "header" "main" "footer");
     }
 
-    .navbar li {
-        font-size: 12;
+    .header {
+        @include flex(column, wrap, stretch, center);
+        align-content: center;
+
+    }
+
+    .navbar li a{
+        font-size: .5rem;
+        padding: 10px;
+        font-weight: bold;
     }
 
     .inicio {
@@ -32,13 +37,13 @@
 
     }
 
-    .derechos h2 {
-        font-size: 10px;
+    .derechos p {
+        font-size: .6rem;
+        margin-bottom: 5px;
     }
 
     .footer {
-        display: flex;
-        flex-direction: column;
+        @include flex(column, nowrap, center, stretch);
         font-size: 12px;
     }
 

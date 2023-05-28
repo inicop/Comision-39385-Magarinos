@@ -1,0 +1,51 @@
+@media(max-width:1024px) {
+
+    #buscador {
+        width: 400px;
+    }
+
+    .texto h1 {
+        font-size: 1,1rem;
+    }
+
+    .enlace img {
+        width: 200px;
+    }
+
+
+    .inicio {
+        display: none;
+    }
+
+    .navbar li {
+        font-size: 14px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+
+    .contacto li a img {
+        width: 20px;
+    }
+
+    .seguinos li a img {
+        width: 20px;
+    }
+
+    .phone{
+            li{
+                .tel{
+                    width: 20px;
+                }
+                p{
+                    text-align: center;
+                    font-size: .8rem;
+                }
+            }
+        
+        
+    }
+
+
+}

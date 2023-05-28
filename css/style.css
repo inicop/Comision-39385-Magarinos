@@ -19,11 +19,13 @@
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: 80%;
   grid-template-rows: auto auto auto;
   justify-content: none;
   align-items: none;
   grid-template-areas: "header" "main" "footer";
+  justify-content: center;
+  align-items: center;
 }
 
 header {
@@ -36,6 +38,13 @@ header {
   grid-template-areas: "enlace navbar inicio";
   background-color: #ffffff;
   font-family: "Montserrat", sans-serif;
+}
+header .enlace img {
+  width: 300px;
+}
+header .enlace img:hover {
+  transform: scale(1.02, 1.02);
+  transition: 0, 1ms;
 }
 header nav ul {
   display: flex;
@@ -62,12 +71,58 @@ header div ul li a {
   font-size: 0.9rem;
   font-weight: 700;
 }
+header .navbar li a:hover {
+  color: rgb(84, 137, 223);
+}
+header .inicio li a:hover {
+  color: rgb(58, 97, 160);
+}
 
 main {
-  border-style: solid none none none;
-  border-color: #344f79;
-  border-width: 1px;
   grid-area: main;
+  justify-content: center;
+  align-items: center;
+}
+main .contenedor {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, rgba(44, 44, 44, 0.5), rgba(54, 54, 54, 0.5019607843)), url(/asset/img/portada.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+main #buscador {
+  width: 400px;
+  height: 35px;
+  background-size: 14px;
+  text-align: center;
+  border-radius: 12px;
+  border: transparent;
+  border: solid 1px #ccc;
+  padding: 10px 10px 10px 30px;
+  margin-top: 100px;
+  outline: none;
+}
+main .texto {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-top: 10px;
+  width: 80%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+main h2 {
+  color: rgb(52, 79, 121);
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: double;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
 }
 main .box {
   height: auto;
@@ -90,15 +145,18 @@ main .box .card {
   border-radius: 10px;
   border: grey solid 0.1px;
 }
-main .box .card .imgCard {
-  font-family: "Montserrat", sans-serif;
-  height: 100%;
+main .box .card div {
+  height: 200px;
   width: 100%;
+}
+main .box .card div .imgCard {
+  width: 100%;
+  height: 200px;
   overflow: hidden;
-  border-radius: 10px 10px 0 0;
+  border-radius: 5px 5px 0px 0px;
 }
 main .box .card .leyenda {
-  height: 200px;
+  height: auto;
   width: 100%;
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -126,7 +184,7 @@ main .box .card .leyenda h5 {
   border-radius: 5px 5px 8px 8px;
   padding: 2px 2px 5px 5px;
 }
-main .box .card .leyenda a {
+main .box .card a {
   font-style: bold;
   text-decoration: none;
   color: white;
@@ -218,6 +276,136 @@ footer .icono-footer {
 footer .icono-footer:hover {
   transform: scale(1.05, 1.05);
   /* transition: 0.3s; */
+}
+
+@media (max-width: 1024px) {
+  #buscador {
+    width: 400px;
+  }
+  .texto h1 {
+    font-size: 1, 1rem;
+  }
+  .enlace img {
+    width: 200px;
+  }
+  .inicio {
+    display: none;
+  }
+  .navbar li {
+    font-size: 14px;
+  }
+  .footer {
+    font-size: 14px;
+  }
+  .contacto li a img {
+    width: 20px;
+  }
+  .seguinos li a img {
+    width: 20px;
+  }
+  .phone li .tel {
+    width: 20px;
+  }
+  .phone li p {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 425px) {
+  #buscador {
+    width: 300px;
+  }
+  .contenedor {
+    height: 100vh;
+  }
+  .texto h1 {
+    font-size: 14px;
+  }
+  .heroIndex {
+    display: grid;
+    grid-template-columns: 95%;
+    grid-template-rows: auto auto auto;
+    justify-content: none;
+    align-items: none;
+    grid-template-areas: "header" "main" "footer";
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    align-items: center;
+    align-content: center;
+  }
+  .navbar li a {
+    font-size: 0.5rem;
+    padding: 10px;
+    font-weight: bold;
+  }
+  .inicio {
+    display: none;
+  }
+  .enlace img {
+    width: 200px;
+  }
+  .derechos p {
+    font-size: 0.6rem;
+    margin-bottom: 5px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    font-size: 12px;
+  }
+  .contacto li a img {
+    width: 20px;
+  }
+  .seguinos li a img {
+    width: 20px;
+  }
+  .phone li img {
+    width: 20px;
+  }
+}
+@media (max-width: 375px) {
+  .card {
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  .leyenda {
+    height: 100px;
+  }
+  /* Desc */
+  .leyenda h3 {
+    margin: -3px;
+    font-size: 11px;
+  }
+  /*Tipo (Alquiler o venta)*/
+  .leyenda h4 {
+    margin-top: 4px;
+    font-size: 10px;
+    color: rgb(52, 79, 121);
+  }
+  /*Ubicacion*/
+  .leyenda h5 {
+    margin: 2px;
+    font-size: 10x;
+  }
+  /*Costo*/
+  .leyenda a {
+    font-size: 16px;
+    text-decoration: solid;
+    text-decoration: none;
+    color: #fff;
+    background-color: #344f79;
+    height: 90%;
+    border-radius: 5px;
+    padding: 2px 2px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
