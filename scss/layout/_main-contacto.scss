@@ -1,5 +1,9 @@
 main {
-    
+
+    .container {
+        width: 50%;
+
+    }
 
     .form-lable {
         color: $color-base;
@@ -7,18 +11,8 @@ main {
         font-weight: 500;
     }
 
-
-    .form-Check{
+    .form-Check {
         @extend .form-lable;
 
     }
-
-    
-
-
 }
-
-// .form-control{
-//     @extend .form-lable;
-//     font-style: initial;
-// }

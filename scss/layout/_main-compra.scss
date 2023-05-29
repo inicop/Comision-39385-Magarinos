@@ -1,0 +1,114 @@
+.moldeCompra {
+    @include flex(column, wrap, space-between, center);
+    font-family: $typo-secundaria;
+
+    div {
+        width: 80%;
+        gap: 10px;
+        margin: 10px auto 10px auto;
+
+        h2 {
+            color: rgb(239, 241, 243);
+            text-align: center;
+            background-color: #344f79;
+        }
+    }
+
+    .TituloCompra {
+        color: rgb(239, 241, 243);
+        text-align: center;
+        background-color: #344f79;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+
+
+    .contImgCompra {
+
+        @include flex(column, no-wrap, space-between, center);
+
+        img {
+            width: 700px;
+            border-radius: 5px;
+        }
+    }
+
+    .contInsDatVendedor {
+        @include flex(column, no-wrap, space-between, center);
+
+        div {
+            background-color:$color-base;
+            color: rgb(255, 255, 255);
+            @include flex(row, no-wrap, space-around, center);
+            padding: 5px;
+            border-radius: 5px;
+
+        }
+    }
+
+
+    .datosVendedor {
+        background-color: #fff;
+        @include flex(column,no-wrap,center, center);
+        border: #ffffff solid .2px;
+        list-style: none;
+        text-decoration: none;
+        border-radius: 5px;
+        color: #344f79;
+        width: 200px;
+        height: 200px;
+
+        li {
+            img {
+                width: 40px;
+            }
+        }
+    }
+
+    .tipo_Costo {
+        @include flex(column,no-wrap,space-around, center);
+        text-decoration: none;
+        list-style: none;
+        width: 150px;
+        height: 150px;
+
+        li {
+            h2 {
+
+                border-radius: 5px;
+                border: #ffffff solid 1px;
+            }
+        }
+    }
+
+
+    .whapp:hover {
+        width: 41px;
+        transition: .3s;
+    }
+
+    .contDescCompleta {
+        border: #344f79 solid 1px;
+        color: #344f79;
+        height: auto;
+        text-align: left;
+        border-radius: 5px;
+
+        p {
+            height: auto;
+            font-size: auto;
+        }
+
+    }
+
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: dark;
+    }
+}

@@ -1,5 +1,5 @@
 footer {
-    margin-top: 60px;
+    
     background-color: $footer_color;
     grid-area: footer;
     font-family: $typo-secundaria;
@@ -30,7 +30,7 @@ footer {
     }
 
     div {
-        h3 {}
+
 
         .phone {
             grid-area: tel;
@@ -52,7 +52,6 @@ footer {
     }
 
     div {
-        h3 {}
 
         .seguinos {
             grid-area: seguinos;
