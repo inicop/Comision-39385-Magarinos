@@ -1,0 +1,68 @@
+@media(max-width:768px) {
+
+    .contenedor {
+
+        .contBuscador {
+
+            #buscador {
+                width: 400px;
+            }
+        }
+
+        .texto h1 {
+            font-size: .9rem;
+        }
+    }
+
+    .heroIndex {
+        @include grid(100%, auto auto auto, none, none, "header" "main" "footer");
+    }
+
+    .header {
+        @include flex(column, wrap, stretch, center);
+        align-content: center;
+    }
+
+
+    .navbar li {
+        margin-bottom: 5px;
+        gap:30px;
+        a{
+            font-size: .9rem;
+        font-weight: bold;
+
+        }
+
+    }
+
+
+    .inicio {
+        display: none;
+    }
+
+    .enlace img {
+        width: 200px;
+
+    }
+
+    .derechos p {
+        font-size: .6rem;
+        margin-bottom: 5px;
+    }
+
+    .footer {
+        @include flex(column, nowrap, center, stretch);
+        font-size: 12px;
+    }
+.subPrincipalTrabaja{
+
+    .enlinea{
+        @include flex(column, nowrap, center, center);
+        margin: 20px 0px;
+        p{
+            width: 80%;
+        }
+    }
+}
+
+}

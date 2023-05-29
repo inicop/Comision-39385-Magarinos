@@ -15,9 +15,10 @@ header {
     .enlace img:hover {
         transform: scale(1.02, 1.02);
         transition: 0, 1ms;
+        cursor:pointer;
     }
 
-    nav {
+    nav{
         ul {
             @include flex(row, nowrap, space-between, center);
             gap: 25px;

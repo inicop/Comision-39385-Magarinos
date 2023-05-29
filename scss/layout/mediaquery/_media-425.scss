@@ -1,19 +1,25 @@
 @media(max-width:425px) {
 
-    #buscador {
-        width: 300px;
-    }
-
     .contenedor {
-        height: 100vh;
+
+        .contBuscador {
+
+            #buscador {
+                width: 300px;
+            }
+        }
+
+        .texto h1 {
+            font-size: .8rem;
+        }
     }
 
-    .texto h1 {
-        font-size: 14px;
+    .trabaja {
+        display: none;
     }
 
     .heroIndex {
-        @include grid(95%, auto auto auto, none, none, "header" "main" "footer");
+        @include grid(100%, auto auto auto, none, none, "header" "main" "footer");
     }
 
     .header {
@@ -22,10 +28,18 @@
 
     }
 
-    .navbar li a{
-        font-size: .5rem;
-        padding: 10px;
-        font-weight: bold;
+
+    
+
+    .navbar {
+        gap: 10px;
+        li {;
+            a {
+            font-size: .7rem;
+            padding: 5px;
+            font-weight: 700;
+            }
+        }
     }
 
     .inicio {
@@ -57,6 +71,12 @@
 
     .phone li img {
         width: 20px;
+    }
+
+    .enlinea{
+        h2{
+            font-size: 1rem;
+        }
     }
 
 }

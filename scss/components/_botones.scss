@@ -1,0 +1,24 @@
+.btn {
+  background-color: $color-base;
+  font-family: $typo-secundaria;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: .8rem;
+
+
+  &:hover {
+
+    border: #344f79 solid 3px;
+    background: #475e83;
+    transform: scale(1.05, 1.05);
+    transition: 5ms;
+
+
+  }
+}
+
+.btn-trabaja {
+  @extend .btn;
+  
+}

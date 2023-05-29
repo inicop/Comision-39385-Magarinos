@@ -1,0 +1,24 @@
+main {
+    
+
+    .form-lable {
+        color: $color-base;
+        font-family: $typo-secundaria;
+        font-weight: 500;
+    }
+
+
+    .form-Check{
+        @extend .form-lable;
+
+    }
+
+    
+
+
+}
+
+// .form-control{
+//     @extend .form-lable;
+//     font-style: initial;
+// }

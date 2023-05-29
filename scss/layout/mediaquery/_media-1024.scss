@@ -1,11 +1,23 @@
 @media(max-width:1024px) {
 
-    #buscador {
-        width: 400px;
+    .heroIndex {
+        @include grid(100%, auto auto auto, none, none, "header" "main" "footer");
     }
+.navbar{
+    gap: 18px;
+}    
 
-    .texto h1 {
-        font-size: 1,1rem;
+
+    .contenedor {
+
+        .contBuscador {
+            
+            #buscador {
+                width: 500px;
+            }
+        }
+           
+
     }
 
     .enlace img {
@@ -18,7 +30,7 @@
     }
 
     .navbar li {
-        font-size: 14px;
+        font-size: .9rem;
     }
 
     .footer {
@@ -33,18 +45,19 @@
         width: 20px;
     }
 
-    .phone{
-            li{
-                .tel{
-                    width: 20px;
-                }
-                p{
-                    text-align: center;
-                    font-size: .8rem;
-                }
+    .phone {
+        li {
+            .tel {
+                width: 20px;
             }
-        
-        
+
+            p {
+                text-align: center;
+                font-size: .8rem;
+            }
+        }
+
+
     }
 
 

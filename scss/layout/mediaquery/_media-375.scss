@@ -1,6 +1,20 @@
-
-
 @media(max-width:375px) {
+
+    .navbar {
+        @include flex(row, nowrap, space-between, center);
+
+        li {
+            gap: 10px;
+            font-size: .6rem;
+        }
+    }
+
+    .header {
+        @include flex(column, wrap, space-between, center);
+        align-content: center;
+
+    }
+
     .card {
         height: 200px;
         width: 200px;

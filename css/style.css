@@ -19,7 +19,7 @@
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 80%;
+  grid-template-columns: 90%;
   grid-template-rows: auto auto auto;
   justify-content: none;
   align-items: none;
@@ -45,6 +45,7 @@ header .enlace img {
 header .enlace img:hover {
   transform: scale(1.02, 1.02);
   transition: 0, 1ms;
+  cursor: pointer;
 }
 header nav ul {
   display: flex;
@@ -96,7 +97,7 @@ main .contenedor {
   background-position: center center;
 }
 main #buscador {
-  width: 400px;
+  width: 30rem;
   height: 35px;
   background-size: 14px;
   text-align: center;
@@ -200,7 +201,7 @@ main .box .card:hover {
 }
 
 footer {
-  margin-top: 100px;
+  margin-top: 60px;
   background-color: #e9edf1;
   grid-area: footer;
   font-family: "Montserrat", sans-serif;
@@ -278,12 +279,115 @@ footer .icono-footer:hover {
   /* transition: 0.3s; */
 }
 
+.btn, .btn-trabaja {
+  background-color: #344f79;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 0.8rem;
+}
+.btn:hover, .btn-trabaja:hover {
+  border: #344f79 solid 3px;
+  background: #475e83;
+  transform: scale(1.05, 1.05);
+  transition: 5ms;
+}
+
+main .form-lable, main .form-Check {
+  color: #344f79;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+main {
+  grid-area: main;
+}
+main .principalTrabaja {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border-color: black solid 3px;
+  width: 100%;
+  flex-grow: 10px;
+  align-content: center;
+}
+main .principalTrabaja .subPrincipalTrabaja {
+  width: 100%;
+}
+main .principalTrabaja .subPrincipalTrabaja div img {
+  width: 300px;
+  height: 200px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+main .enlinea {
+  width: 100%;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  border-color: black solid 3px;
+}
+main .enlinea p {
+  background-color: #344f79;
+  width: 50%;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  text-justify: auto;
+  border-radius: 10px;
+  padding: 10px;
+}
+.vender {
+  color: #344f79;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+.vender h1 {
+  width: 800px;
+  height: 50px;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 26px;
+}
+.vender p {
+  width: 800px;
+  height: auto;
+  text-align: justify;
+  padding: 20px 20px;
+  background-color: #344f79;
+  border-radius: 5px;
+  color: rgb(243, 242, 242);
+  font-size: 14px;
+}
+.vender p strong {
+  font-size: 1rem;
+}
+.vender div a input {
+  margin-top: 30px;
+}
+
 @media (max-width: 1024px) {
-  #buscador {
-    width: 400px;
+  .heroIndex {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    justify-content: none;
+    align-items: none;
+    grid-template-areas: "header" "main" "footer";
   }
-  .texto h1 {
-    font-size: 1, 1rem;
+  .navbar {
+    gap: 18px;
+  }
+  .contenedor .contBuscador #buscador {
+    width: 500px;
   }
   .enlace img {
     width: 200px;
@@ -292,7 +396,7 @@ footer .icono-footer:hover {
     display: none;
   }
   .navbar li {
-    font-size: 14px;
+    font-size: 0.9rem;
   }
   .footer {
     font-size: 14px;
@@ -311,19 +415,16 @@ footer .icono-footer:hover {
     font-size: 0.8rem;
   }
 }
-@media (max-width: 425px) {
-  #buscador {
-    width: 300px;
+@media (max-width: 768px) {
+  .contenedor .contBuscador #buscador {
+    width: 400px;
   }
-  .contenedor {
-    height: 100vh;
-  }
-  .texto h1 {
-    font-size: 14px;
+  .contenedor .texto h1 {
+    font-size: 0.9rem;
   }
   .heroIndex {
     display: grid;
-    grid-template-columns: 95%;
+    grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
     justify-content: none;
     align-items: none;
@@ -337,10 +438,77 @@ footer .icono-footer:hover {
     align-items: center;
     align-content: center;
   }
+  .navbar li {
+    margin-bottom: 5px;
+    gap: 30px;
+  }
   .navbar li a {
-    font-size: 0.5rem;
-    padding: 10px;
+    font-size: 0.9rem;
     font-weight: bold;
+  }
+  .inicio {
+    display: none;
+  }
+  .enlace img {
+    width: 200px;
+  }
+  .derechos p {
+    font-size: 0.6rem;
+    margin-bottom: 5px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    font-size: 12px;
+  }
+  .subPrincipalTrabaja .enlinea {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+  }
+  .subPrincipalTrabaja .enlinea p {
+    width: 80%;
+  }
+}
+@media (max-width: 425px) {
+  .contenedor .contBuscador #buscador {
+    width: 300px;
+  }
+  .contenedor .texto h1 {
+    font-size: 0.8rem;
+  }
+  .trabaja {
+    display: none;
+  }
+  .heroIndex {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    justify-content: none;
+    align-items: none;
+    grid-template-areas: "header" "main" "footer";
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    align-items: center;
+    align-content: center;
+  }
+  .navbar {
+    gap: 10px;
+  }
+  .navbar li a {
+    font-size: 0.7rem;
+    padding: 5px;
+    font-weight: 700;
   }
   .inicio {
     display: none;
@@ -369,8 +537,30 @@ footer .icono-footer:hover {
   .phone li img {
     width: 20px;
   }
+  .enlinea h2 {
+    font-size: 1rem;
+  }
 }
 @media (max-width: 375px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar li {
+    gap: 10px;
+    font-size: 0.6rem;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
   .card {
     height: 200px;
     width: 200px;
@@ -405,6 +595,22 @@ footer .icono-footer:hover {
     height: 90%;
     border-radius: 5px;
     padding: 2px 2px;
+  }
+}
+@media (max-width: 320px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1px;
+  }
+  .contenedor .contBuscador #buscador {
+    width: 250px;
+  }
+  .contenedor .texto h1 {
+    font-size: 0.8rem;
   }
 }
 
