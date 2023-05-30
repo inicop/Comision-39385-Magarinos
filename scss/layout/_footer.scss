@@ -3,6 +3,7 @@ footer {
     background-color: $footer_color;
     grid-area: footer;
     font-family: $typo-secundaria;
+   
 
     @include grid(repeat(3, 1fr), 1fr .5fr, center, center, "contacto tel seguinos" "derechos derechos derechos");
 
