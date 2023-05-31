@@ -1,43 +1,96 @@
 main {
     grid-area: main;
     justify-content: center;
-    align-items:center;
+    align-items: center;
 
     .contenedor {
         width: 100%;
         height: 600px;
         @include flex(column, wrap, center, center);
-        background: linear-gradient(to right, rgba(44, 44, 44, 0.5), #36363680), url(./asset/img/portada.jpg);
+        background: linear-gradient(to right, rgba(44, 44, 44, 0.5), #36363680), url(asset/img/portada.jpg);
         background-size: cover;
         background-position: center center;
 
+        .contBuscador {
+            width: 100%;
+            height: auto;
+            max-width: 100vh;
+            padding: 5%;
+            @include flex(row, nowrap, center, center);
+
+
+
+            .barra-busqueda {
+                width: 100%;
+                max-width: 700px;
+                background: white;
+                @include flex(row, nowrap, none, center);
+                border-radius: 50px;
+                padding: 0px 20px;
+
+
+
+                input {
+                    background: transparent;
+                    height: 60px;
+                    flex: 1;
+                    border: 0;
+                    outline: none;
+                    padding: 24px 20px;
+                    font-size: 1rem;
+                    color: $color-base;
+                }
+
+                button {
+                    margin-right: -20px;
+                    border: 0;
+                    border-radius: 0px 50% 50% 0px;
+                    width: 60px;
+                    height: 60px;
+                    background: cornflowerbl;
+
+                    cursor: pointer;
+
+                    img {
+                        width: 20px;
+
+                    }
+
+
+
+                    &:hover {
+                        transform: scale(1.05, 1.05);
+                        transition: 5ms;
+                        
+
+                    }
+
+
+
+
+                }
+            }
+        }
+
+
+
+
+        .texto {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            margin-top: 15px;
+            width: 80%;
+            font-family: $typo-secundaria;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
     }
 
-    #buscador {
-        width: 30rem;
-        height: 35px;
-        background-size: 14px;
-        text-align: center;
-        border-radius: 12px;
-        border: transparent;
-        border: solid 1px #ccc;
-        padding: 10px 10px 10px 30px;
-        margin-top: 100px;
-        outline: none;
-    }
 
-    .texto {
-        color: rgb(255, 255, 255);
-        text-align: center;
-        margin-top: 10px;
-        width: 80%;
-        font-family: $typo-secundaria;
-        font-weight: bold;
-        font-size: 0.8rem;
-    }
 
     h2 {
-        color: rgb(52, 79, 121);
+        color: $color-base;
         margin-top: 20px;
         text-align: center;
         text-decoration: double;
@@ -61,13 +114,14 @@ main {
             div {
                 height: 200px;
                 width: 100%;
-                    .imgCard {
-                        width: 100%;
-                        height: 200px;
-                        overflow: hidden;
-                        border-radius: 5px 5px 0px 0px;
-                    }
+
+                .imgCard {
+                    width: 100%;
+                    height: 200px;
+                    overflow: hidden;
+                    border-radius: 5px 5px 0px 0px;
                 }
+            }
 
 
 
@@ -133,6 +187,7 @@ main {
             }
         }
     }
+
     margin-bottom: 30px;
 
 }

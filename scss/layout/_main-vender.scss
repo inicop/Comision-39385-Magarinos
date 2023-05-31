@@ -3,7 +3,7 @@
     
     color: white;
     background: linear-gradient(rgb(5,7,12,0.75),rgb(5,7,12,0.75)),
-    url(/asset/img/bcknd-vta.jpg) no-repeat center center fixed;
+    url(asset/img/bcknd-vta.jpg) no-repeat center center fixed;
     
     @include flex(column,wrap,space-evenly,center);
     font-family: $typo-secundaria;
