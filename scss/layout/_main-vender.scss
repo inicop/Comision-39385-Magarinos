@@ -1,23 +1,22 @@
 .vender {
-
+grid-area: main;
     color: white;
     background: linear-gradient(rgb(5, 7, 12, 0.75), rgb(5, 7, 12, 0.75)),
         url("https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80") no-repeat center center fixed;
 
-    @include flex(column, wrap, space-evenly, center);
+    @include flex(column, wrap, center, center);
     font-family: $typo-secundaria;
 
     h1 {
-        margin-top: 30px;
-        width: 800px;
-        height: 50px;
+        margin: 30px 30px;
+        width: 80%;
         text-align: center;
-        font-size: 26px;
+        font-size: calc(1em + 1vw);
 
     }
 
     p {
-        width: 800px;
+        width: 80%;
         height: auto;
         text-align: justify;
         padding: 20px 20px;

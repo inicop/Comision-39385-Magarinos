@@ -1,63 +1,107 @@
+// .logo {
+// margin: left 50px;
+// }
+// nav {
+//     height: 100px;
+// }
+// .bar-btn{
+//     display: none;
+
+// }
+// .nav-menu{
+//     position: relative;
+//     height: 100px;
+//     top: 0px;
+//     background: none;
+//     transition: none;
+//     text-align: right;
+//     margin-right: 50px;
+//     li{
+//         display: inline-block;
+//         line-height: 100px;
+//         margin: 0 20px;
+//         transition: none;
+//         a{
+//             font-size: 12px;
+//         }
+//     }
+// }
+
+
 header {
-    grid-area: header;
+    width: 100%;
+    background-color: #ffffff;
+
     //border-style: none none none solid;
     //border-color: #344f79;
     //border-width: 1px;
 
-    @include grid(0.3fr auto 0.2fr, auto, space-between, center, "enlace navbar inicio");
-    background-color: #ffffff;
-    font-family: $typo-secundaria;
+    nav {
+        height: 100px;
+        width: 100%;
+        @include flex(row, wrap, space-between, center);
 
-    .enlace img{
-        width:300px;
-    }
 
-    .enlace img:hover {
-        transform: scale(1.02, 1.02);
-        transition: 0, 1ms;
-        cursor:pointer;
-    }
+        .logo {
+            width: 300px;
+            height: 70px;
+            margin-left: 50px;
+        }
 
-    nav{
-        ul {
-            @include flex(row, nowrap, space-between, center);
-            gap: 25px;
+        .bar-btn {
+            display: none;
+
+        }
+
+        .nav-menu {
+            position: relative;
+            height: 100px;
+            top: 0px;
+            background: none;
+            transition: none;
+            text-align: right;
+            margin-right: 50px;
+            font-family: $typo-secundaria;
+            text-decoration: none;
+            color: $color-base;
+            font-size: .9rem;
 
             li {
+                display: inline-block;
+                line-height: 100px;
+                margin: 0 20px;
+                transition: none;
                 list-style: none;
-
                 a {
                     text-decoration: none;
                     color: $color-base;
                     font-size: .9rem;
-                    
+
+                    &:hover {
+                        color: rgb(84, 137, 223);
+                        transition: .3s;
+                    }
                 }
 
-            }
-        }
-    }
-
-    div {
-        ul {
-            li {
-                list-style: none;
-
-                a {
-                    text-decoration: none;
-                    color: $color-base;
-                    font-size: .9rem;
-                    font-weight: 700;
+                a.active {
+                    color: rgb(84, 137, 223);
+                    transition: .3s;
                 }
             }
         }
-    }
 
-    .navbar li a:hover {
-        color: rgb(84, 137, 223);
-    }
+        #check {
+            display: none;
+        }
 
+        #check:checked~.nav-menu {
+            height: 86vh;
+            position: absolute;
+        }
 
-    .inicio li a:hover {
-        color: rgb(58, 97, 160);
+        #check:checked~.nav-menu li {
+            display: block;
+        }
+
     }
 }

@@ -7,7 +7,7 @@ main {
         width: 100%;
         height: 600px;
         @include flex(column, wrap, center, center);
-        background-image: linear-gradient(to right, rgba(44, 44, 44, 0.5), #36363680), url("../../asset/img/portada.jpg");
+        background-image: linear-gradient(to right, rgba(44, 44, 44, 0.5), #36363680), url("https://images.unsplash.com/photo-1676164539863-612beb931dfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80");
         background-size: cover;
         background-position: center center;
 
@@ -133,8 +133,7 @@ main {
                 text-align: center;
                 font-family: $typo-secundaria;
 
-                h3 {
-                    // DESC
+                 .desc-prop{
                     font-size: 14px;
                     font-weight: 400;
                     text-decoration: double;
@@ -143,8 +142,7 @@ main {
 
                 }
 
-                h4 {
-                    //TIPO OPERACION
+                .tipo-op {
                     font-size: 12px;
                     color: white;
                     margin: 1px 20px;
@@ -154,8 +152,7 @@ main {
 
                 }
 
-                h5 {
-                    // Barrio
+                .barrio-prop {
                     font-size: 10px;
                     color: white;
                     background-color: $color-base;
@@ -167,8 +164,8 @@ main {
 
             }
 
-            a {
-
+            .precio-prop {
+                
                 font-style: bold;
                 text-decoration: none;
                 color: white;

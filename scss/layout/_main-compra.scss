@@ -2,6 +2,7 @@
     @include flex(column, wrap, space-between, center);
     font-family: $typo-secundaria;
 
+
     div {
         width: 80%;
         gap: 10px;
@@ -40,9 +41,13 @@
         div {
             background-color:$color-base;
             color: rgb(255, 255, 255);
-            @include flex(row, no-wrap, space-around, center);
+            @include flex(row, wrap, space-around, center);
             padding: 5px;
             border-radius: 5px;
+
+            .tipo_Costo{
+                order: 3;
+            }
 
         }
     }
@@ -70,12 +75,14 @@
         @include flex(column,no-wrap,space-around, center);
         text-decoration: none;
         list-style: none;
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
+        
+        
 
         li {
             h2 {
-
+                padding: 10px;
                 border-radius: 5px;
                 border: #ffffff solid 1px;
             }

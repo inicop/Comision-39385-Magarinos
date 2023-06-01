@@ -3,20 +3,101 @@
     .heroIndex {
         @include grid(100%, auto auto auto, none, none, "header" "main" "footer");
     }
-.navbar{
-    gap: 18px;
-}    
 
+    header {
+        width: 100%;
+        background-color: #ffffff;
+        
+        
+        //border-style: none none none solid;
+        //border-color: #344f79;
+        //border-width: 1px;
+
+        nav {
+            
+            width: 100%;
+            @include flex(row, wrap, space-between, center);
+            
+
+            .logo {
+                width: 300px;
+                height: 70px;
+                margin-left: 20px;
+            }
+
+            .bar-btn {
+                display: inline;
+                font-size: 1.9rem;
+                margin-right: 20px;
+                color: $color-base;
+                cursor: pointer;
+
+            }
+
+            .nav-menu {
+                position: fixed;
+                width: 100%;
+                height: 0px;
+                top: 100px;
+                background-color: $color-base;
+                text-align: center;
+                transition: all .5s;
+                font-family: $typo-secundaria;
+                text-decoration: none;
+                font-size: .9rem;
+
+                li {
+                    list-style: none;
+                    display: none;
+                    line-height: 30px;
+                    margin: 50px 0px;
+                    transition: all .5s;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-size: .9rem;
+                        text-transform: uppercase;
+                        font-weight: bold;
+
+                        &:hover {
+                            color: rgb(84, 137, 223);
+                            transition: .3s;
+                        }
+                    }
+
+                    a.active {
+                        color: rgb(84, 137, 223);
+                        transition: .3s;
+                    }
+                }
+            }
+
+            #check {
+                display: none;
+            }
+
+            #check:checked ~ .nav-menu {
+                height: 86vh;
+                position: absolute;
+            }
+
+            #check:checked ~ .nav-menu li {
+                display: block;
+            }
+
+        }
+    }
 
     .contenedor {
 
         .contBuscador {
-            
+
             #buscador {
                 width: 500px;
             }
         }
-           
+
 
     }
 

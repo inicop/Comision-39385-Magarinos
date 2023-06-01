@@ -8,24 +8,29 @@
     <meta name="description"
         content="Encontrá Casas y Departamentos en Venta y Alquiler. Tu próxima Propiedad está en MAGARIÑOS.">
     <meta name="keywords"
-        content="Propiedades, inmuebles, casas, apartamentos, ph, countries, barrios cerrados, alquiler, venta, compra, alquiler temporario, uruguay.  Casas y Apartamentos, inmuebles, propiedades, Venta y Alquiler, Uruguay">
+        content="Inmobiliaria, Propiedades en venta, Propiedades en alquiler, Bienes raíces, Compra de propiedades, Alquiler de propiedades, Casas en venta, Apartamentos en alquiler, Terrenos en venta, Locales comerciales, Agente inmobiliario, Buscador de propiedades, Contacto inmobiliaria, Servicios inmobiliarios, Comprar casa, Alquilar apartamento, Venta de terrenos, Asesoramiento inmobiliario, Inversiones en bienes raíces, Oportunidades inmobiliarias">
     <title>Venta y Alquiler de propiedades | MAGARIÑOS|</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/11571b0db6.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="asset/icons/favicon.png" type="image/x-icon">
 </head>
 
 <body>
-    <div class="heroIndex">
+    <div class="hero">
         <header class="header">
-            <div>
-                <a class="enlace" href="./index.html">
-                    <img src="./asset/img/LOGO.png" alt="Logo Web">
-                </a>
-            </div>
             <nav>
-                <ul class=" navbar">
-                    <li><a href="./index.html">Inicio</a></li>
+                <div>
+                    <a href="./index.html">
+                        <img src="./asset/img/LOGO.png" alt="Logo Web" class="logo">
+                    </a>
+                </div>
+                <input type="checkbox" id="check">
+                <label for="check" class="bar-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <ul class="nav-menu">
+                    <li><a class="active" href="./index.html">Inicio</a></li>
                     <li><a href="./pages/comprar.html">Comprar</a></li>
                     <li><a href="./pages/alquilar.html">Alquilar</a></li>
                     <li><a href="./pages/vender.html">Vender</a></li>
@@ -33,17 +38,13 @@
                     <li class="trabaja"><a href="./pages/tabajaConNosotros.html">Vivilo</a></li>
                 </ul>
             </nav>
-            <div>
-                <ul class="inicio">
-                    <li><a href="./pages/tabajaConNosotros.html">Iniciar Sesión</a></li>
-                </ul>
-            </div>
         </header>
 
         <main>
             <div class="contenedor">
                 <div class="contBuscador">
-                    <form action="https://inicop.github.io/Comision-39385-Magarinos/pages/comprar.html" method="get" class="barra-busqueda">
+                    <form action="https://inicop.github.io/Comision-39385-Magarinos/pages/comprar.html" method="get"
+                        class="barra-busqueda">
                         <input type="text" placeholder="¿Dónde querés mudarte?" name="x">
                         <button type="submit"><img src="./asset/icons/search.svg" alt="Icono Buscar"></button>
                     </form>
@@ -62,10 +63,10 @@
                         <img class="imgCard" src="./asset/img/prop_uno.jpg" alt="Imagen Propiedad número 1">
                     </div>
                     <div class="leyenda">
-                        <h3>Espectacular casa ubicada en un excelente entorno, próximo a rambla.</h3>
-                        <h4>VENTA</h4>
-                        <h5>Palermo - Montevideo</h5>
-                        <a href="">USD 450.000</a>
+                        <p class="desc-prop">Espectacular casa ubicada en un excelente entorno, próximo a rambla.</p>
+                        <p class="tipo-op">VENTA</p>
+                        <p class="barrio-prop">Palermo - Montevideo</p>
+                        <p class="precio-prop">USD 450.000</p>
                     </div>
                 </div>
                 <div class="card">
@@ -73,10 +74,10 @@
                         <img class="imgCard" src="./asset/img/prop_cuatro.jpg" alt="Imagen Propiedad número 2">
                     </div>
                     <div class="leyenda">
-                        <h3>Hermoso apartamento ubicado en el centro de Montevideo. </h3>
-                        <h4>VENTA</h4>
-                        <h5>Centro - Montevideo</h5>
-                        <a href="">USD 320.000</a>
+                        <p class="desc-prop">Hermoso apartamento ubicado en el centro de Montevideo.</p>
+                        <p class="tipo-op">VENTA</p>
+                        <p class="barrio-prop">Centro - Montevideo</p>
+                        <p class="precio-prop">USD 320.000</p>
                     </div>
                 </div>
                 <div class="card">
@@ -84,10 +85,10 @@
                         <img class="imgCard" src="./asset/img/prop_diez.jpg" alt="Imagen Propiedad número 3">
                     </div>
                     <div class="leyenda">
-                        <h3>De revista! Casa muy cuidada en un entorno único. </h3>
-                        <h4>VENTA</h4>
-                        <h5>Cordón - Montevideo</h5>
-                        <a href="">USD 350.000</a>
+                        <p class="desc-prop">De revista! Casa muy cuidada en un entorno único.</p>
+                        <p class="tipo-op">VENTA</p>
+                        <p class="barrio-prop">Cordon - Montevideo</p>
+                        <p class="precio-prop">USD 350.000</p>
                     </div>
                 </div>
                 <div class="card">
@@ -95,10 +96,11 @@
                         <img class="imgCard" src="./asset/img/prop_ocho.jpg" alt="Imagen Propiedad número 4">
                     </div>
                     <div class="leyenda">
-                        <h3>Ideal inversión! Loft en venta próximo a universidades, con renta por 2 años.</h3>
-                        <h4>VENTA</h4>
-                        <h5>Aguada - Montevideo</h5>
-                        <a href="">USD 180.000</a>
+                        <p class="desc-prop">Ideal inversión! Loft en venta próximo a universidades, con renta por 2
+                            años.</p>
+                        <p class="tipo-op">VENTA</p>
+                        <p class="barrio-prop">Aguada - Montevideo</p>
+                        <p class="precio-prop">USD 180.000</p>
                     </div>
                 </div>
                 <div class="card">
@@ -106,10 +108,10 @@
                         <img class="imgCard" src="./asset/img/prop_nueve.jpg" alt="Imagen Propiedad número 5">
                     </div>
                     <div class="leyenda">
-                        <h3>Apartameno como nuevo, frente a conocida universidad, seguridad 24hs</h3>
-                        <h4>VENTA</h4>
-                        <h5>Pocitos - Montevideo</h5>
-                        <a href="">USD 387.000</a>
+                        <p class="desc-prop">Apartameno como nuevo, frente a conocida universidad, seguridad 24hs</p>
+                        <p class="tipo-op">VENTA</p>
+                        <p class="barrio-prop">Pocitos - Montevideo</p>
+                        <p class="precio-prop">USD 387.000</p>
                     </div>
                 </div>
                 <div class="card">
@@ -117,10 +119,10 @@
                         <img class="imgCard" src="./asset/img/prop_catorce.jpg" alt="Imagen Propiedad número 6">
                     </div>
                     <div class="leyenda">
-                        <h3>Moderna casa, amplia, proximo a shopping, 3 dormitorios y 2 baños. </h3>
-                        <h4>VENTA</h4>
-                        <h5>Punta Carretas - Montevideo</h5>
-                        <a href="">USD 485.000</a>
+                        <p class="desc-prop">Moderna casa, amplia, proximo a shopping, 3 dormitorios y 2 baños.</p>
+                        <p class="tipo-op">VENTA</p>
+                        <p class="barrio-prop">Punta Carretas - Montevideo</p>
+                        <p class="precio-prop">USD 485.000</p>
                     </div>
                 </div>
                 <div class="card">
@@ -128,10 +130,10 @@
                         <img class="imgCard" src="./asset/img/prop_once.jpg" alt="Imagen Propiedad número 7">
                     </div>
                     <div class="leyenda">
-                        <h3>Familia Grade! Casa de 2 plantas, 4 dormitorios 3 baños con servicio.</h3>
-                        <h4>VENTA</h4>
-                        <h5>Carrasco - Montevideo</h5>
-                        <a href="">USD 550.000</a>
+                        <p class="desc-prop">Familia Grade! Casa de 2 plantas, 4 dormitorios 3 baños con servicio.</p>
+                        <p class="tipo-op">VENTA</p>
+                        <p class="barrio-prop">Carrasco - Montevideo</p>
+                        <p class="precio-prop">USD 550.000</p>
                     </div>
                 </div>
                 <div class="card">
@@ -139,10 +141,34 @@
                         <img class="imgCard" src="./asset/img/prop_doce.jpg" alt="Imagen Propiedad número 8">
                     </div>
                     <div class="leyenda">
-                        <h3>A pocas cuadras del mar, apartamento a nuevo con todos los amenities .</h3>
-                        <h4>VENTA</h4>
-                        <h5>Buceo - Montevideo</h5>
-                        <a href="">USD 268.000</a>
+                        <p class="desc-prop">A pocas cuadras del mar, apartamento a nuevo con todos los amenities </p>
+                        <p class="tipo-op">VENTA</p>
+                        <p class="barrio-prop">Buceo - Montevideo</p>
+                        <p class="precio-prop">USD 268.000</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <img class="imgCard" src="./asset/img/prop_doce.jpg" alt="Imagen Propiedad número 9">
+                    </div>
+                    <div class="leyenda">
+                        <p class="desc-prop">Hermoso apartamento en la zona de pocitos nuevo, gge para 2 autos. </p>
+                        <p class="tipo-op">VENTA</p>
+                        <p class="barrio-prop">Buceo - Montevideo</p>
+                        <p class="precio-prop">USD 398.000</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <img class="imgCard" src="./asset/img/prop_doce.jpg" alt="Imagen Propiedad número 8">
+                    </div>
+                    <div class="leyenda">
+                        <p class="desc-prop">Oportunidad! señora casa en el corazon de punta gorda, parque verde,
+                            piscina y más.</p>
+                        <p class="tipo-op">VENTA</p>
+                        <p class="barrio-prop">Punta Gorda - Montevideo</p>
+                        <p class="precio-prop">USD 504.000</p>
                     </div>
                 </div>
             </section>

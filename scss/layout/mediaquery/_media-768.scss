@@ -18,22 +18,7 @@
         @include grid(100%, auto auto auto, none, none, "header" "main" "footer");
     }
 
-    .header {
-        @include flex(column, wrap, stretch, center);
-        align-content: center;
-    }
 
-
-    .navbar li {
-        margin-bottom: 5px;
-        gap:30px;
-        a{
-            font-size: .9rem;
-        font-weight: bold;
-
-        }
-
-    }
 
 
     .inicio {
@@ -54,15 +39,17 @@
         @include flex(column, nowrap, center, stretch);
         font-size: 12px;
     }
-.subPrincipalTrabaja{
 
-    .enlinea{
-        @include flex(column, nowrap, center, center);
-        margin: 20px 0px;
-        p{
-            width: 80%;
+    .subPrincipalTrabaja {
+
+        .enlinea {
+            @include flex(column, nowrap, center, center);
+            margin: 20px 0px;
+
+            p {
+                width: 80%;
+            }
         }
     }
-}
 
 }

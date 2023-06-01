@@ -12,6 +12,10 @@
     .header {
         @include flex(column, wrap, space-between, center);
         align-content: center;
+        .logo{
+            width: 200px;
+            height: 60px;
+        }
 
     }
 

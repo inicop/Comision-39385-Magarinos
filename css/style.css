@@ -15,11 +15,11 @@
   box-sizing: border-box;
 }
 
-.heroIndex {
+.hero {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 90%;
+  grid-template-columns: 100%;
   grid-template-rows: auto auto auto;
   justify-content: none;
   align-items: none;
@@ -29,54 +29,68 @@
 }
 
 header {
-  grid-area: header;
-  display: grid;
-  grid-template-columns: 0.3fr auto 0.2fr;
-  grid-template-rows: auto;
-  justify-content: space-between;
-  align-items: center;
-  grid-template-areas: "enlace navbar inicio";
+  width: 100%;
   background-color: #ffffff;
-  font-family: "Montserrat", sans-serif;
 }
-header .enlace img {
-  width: 300px;
-}
-header .enlace img:hover {
-  transform: scale(1.02, 1.02);
-  transition: 0, 1ms;
-  cursor: pointer;
-}
-header nav ul {
+header nav {
+  height: 100px;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 25px;
 }
-header nav ul li {
-  list-style: none;
+header nav .logo {
+  width: 300px;
+  height: 70px;
+  margin-left: 50px;
 }
-header nav ul li a {
+header nav .bar-btn {
+  display: none;
+}
+header nav .nav-menu {
+  position: relative;
+  height: 100px;
+  top: 0px;
+  background: none;
+  transition: none;
+  text-align: right;
+  margin-right: 50px;
+  font-family: "Montserrat", sans-serif;
   text-decoration: none;
   color: #344f79;
   font-size: 0.9rem;
 }
-header div ul li {
+header nav .nav-menu li {
+  display: inline-block;
+  line-height: 100px;
+  margin: 0 20px;
+  transition: none;
   list-style: none;
 }
-header div ul li a {
+header nav .nav-menu li a {
   text-decoration: none;
   color: #344f79;
   font-size: 0.9rem;
-  font-weight: 700;
 }
-header .navbar li a:hover {
+header nav .nav-menu li a:hover {
   color: rgb(84, 137, 223);
+  transition: 0.3s;
 }
-header .inicio li a:hover {
-  color: rgb(58, 97, 160);
+header nav .nav-menu li a.active {
+  color: rgb(84, 137, 223);
+  transition: 0.3s;
+}
+header nav #check {
+  display: none;
+}
+header nav #check:checked ~ .nav-menu {
+  height: 86vh;
+  position: absolute;
+}
+header nav #check:checked ~ .nav-menu li {
+  display: block;
 }
 
 main {
@@ -93,7 +107,7 @@ main .contenedor {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to right, rgba(44, 44, 44, 0.5), rgba(54, 54, 54, 0.5019607843)), url("../../asset/img/portada.jpg");
+  background-image: linear-gradient(to right, rgba(44, 44, 44, 0.5), rgba(54, 54, 54, 0.5019607843)), url("https://images.unsplash.com/photo-1676164539863-612beb931dfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80");
   background-size: cover;
   background-position: center center;
 }
@@ -202,14 +216,14 @@ main .box .card .leyenda {
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
-main .box .card .leyenda h3 {
+main .box .card .leyenda .desc-prop {
   font-size: 14px;
   font-weight: 400;
   text-decoration: double;
   color: #344f79;
   padding: 5px 0 5px 0;
 }
-main .box .card .leyenda h4 {
+main .box .card .leyenda .tipo-op {
   font-size: 12px;
   color: white;
   margin: 1px 20px;
@@ -217,7 +231,7 @@ main .box .card .leyenda h4 {
   border-radius: 5px 5px 7px 7px;
   background-color: #344f79;
 }
-main .box .card .leyenda h5 {
+main .box .card .leyenda .barrio-prop {
   font-size: 10px;
   color: white;
   background-color: #344f79;
@@ -225,7 +239,7 @@ main .box .card .leyenda h5 {
   border-radius: 5px 5px 8px 8px;
   padding: 2px 2px 5px 5px;
 }
-main .box .card a {
+main .box .card .precio-prop {
   font-style: bold;
   text-decoration: none;
   color: white;
@@ -388,24 +402,24 @@ main .enlinea p {
 }
 
 .vender {
+  grid-area: main;
   color: white;
   background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url("https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80") no-repeat center center fixed;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   font-family: "Montserrat", sans-serif;
 }
 .vender h1 {
-  margin-top: 30px;
-  width: 800px;
-  height: 50px;
+  margin: 30px 30px;
+  width: 80%;
   text-align: center;
-  font-size: 26px;
+  font-size: calc(1em + 1vw);
 }
 .vender p {
-  width: 800px;
+  width: 80%;
   height: auto;
   text-align: justify;
   padding: 20px 20px;
@@ -471,11 +485,14 @@ main .enlinea p {
   color: rgb(255, 255, 255);
   display: flex;
   flex-direction: row;
-  flex-wrap: no-wrap;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   padding: 5px;
   border-radius: 5px;
+}
+.moldeCompra .contInsDatVendedor div .tipo_Costo {
+  order: 3;
 }
 .moldeCompra .datosVendedor {
   background-color: #fff;
@@ -503,10 +520,11 @@ main .enlinea p {
   align-items: center;
   text-decoration: none;
   list-style: none;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
 }
 .moldeCompra .tipo_Costo li h2 {
+  padding: 10px;
   border-radius: 5px;
   border: #ffffff solid 1px;
 }
@@ -542,8 +560,73 @@ main .enlinea p {
     align-items: none;
     grid-template-areas: "header" "main" "footer";
   }
-  .navbar {
-    gap: 18px;
+  header {
+    width: 100%;
+    background-color: #ffffff;
+  }
+  header nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav .logo {
+    width: 300px;
+    height: 70px;
+    margin-left: 20px;
+  }
+  header nav .bar-btn {
+    display: inline;
+    font-size: 1.9rem;
+    margin-right: 20px;
+    color: #344f79;
+    cursor: pointer;
+  }
+  header nav .nav-menu {
+    position: fixed;
+    width: 100%;
+    height: 0px;
+    top: 100px;
+    background-color: #344f79;
+    text-align: center;
+    transition: all 0.5s;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  header nav .nav-menu li {
+    list-style: none;
+    display: none;
+    line-height: 30px;
+    margin: 50px 0px;
+    transition: all 0.5s;
+  }
+  header nav .nav-menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  header nav .nav-menu li a:hover {
+    color: rgb(84, 137, 223);
+    transition: 0.3s;
+  }
+  header nav .nav-menu li a.active {
+    color: rgb(84, 137, 223);
+    transition: 0.3s;
+  }
+  header nav #check {
+    display: none;
+  }
+  header nav #check:checked ~ .nav-menu {
+    height: 86vh;
+    position: absolute;
+  }
+  header nav #check:checked ~ .nav-menu li {
+    display: block;
   }
   .contenedor .contBuscador #buscador {
     width: 500px;
@@ -588,22 +671,6 @@ main .enlinea p {
     justify-content: none;
     align-items: none;
     grid-template-areas: "header" "main" "footer";
-  }
-  .header {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: stretch;
-    align-items: center;
-    align-content: center;
-  }
-  .navbar li {
-    margin-bottom: 5px;
-    gap: 30px;
-  }
-  .navbar li a {
-    font-size: 0.9rem;
-    font-weight: bold;
   }
   .inicio {
     display: none;
@@ -719,6 +786,10 @@ main .enlinea p {
     justify-content: space-between;
     align-items: center;
     align-content: center;
+  }
+  .header .logo {
+    width: 200px;
+    height: 60px;
   }
   .card {
     height: 200px;
