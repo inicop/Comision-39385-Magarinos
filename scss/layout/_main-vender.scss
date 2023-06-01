@@ -1,11 +1,10 @@
-
 .vender {
-    
+
     color: white;
-    background: linear-gradient(rgb(5,7,12,0.75),rgb(5,7,12,0.75)),
-    url("https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80") no-repeat center center fixed;
-    
-    @include flex(column,wrap,space-evenly,center);
+    background: linear-gradient(rgb(5, 7, 12, 0.75), rgb(5, 7, 12, 0.75)),
+        url("https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80") no-repeat center center fixed;
+
+    @include flex(column, wrap, space-evenly, center);
     font-family: $typo-secundaria;
 
     h1 {
@@ -14,7 +13,7 @@
         height: 50px;
         text-align: center;
         font-size: 26px;
-        
+
     }
 
     p {
@@ -22,26 +21,30 @@
         height: auto;
         text-align: justify;
         padding: 20px 20px;
-        background-color:$color-base;
+        background-color: $color-base;
         border-radius: 5px;
         color: rgb(243, 242, 242);
         font-size: 14px;
         border: solid .01px;
         border-color: white;
-        strong{
+
+        strong {
             font-size: 1rem;
         }
-        
-        
 
 
-        
+
+
+
     }
-    div{
-        a{
-            input{
+
+    div {
+        a {
+            input {
                 margin: 30px 0px;
             }
-        };
+        }
+
+        ;
     }
 }
