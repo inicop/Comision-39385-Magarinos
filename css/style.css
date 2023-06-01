@@ -100,8 +100,8 @@ main .contenedor {
 main .contenedor .contBuscador {
   width: 100%;
   height: auto;
-  max-width: 100vh;
-  padding: 5%;
+  height: 60px;
+  padding: 1%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -110,7 +110,9 @@ main .contenedor .contBuscador {
 }
 main .contenedor .contBuscador .barra-busqueda {
   width: 100%;
+  height: 50px;
   max-width: 700px;
+  min-width: 300px;
   background: white;
   display: flex;
   flex-direction: row;
@@ -122,20 +124,20 @@ main .contenedor .contBuscador .barra-busqueda {
 }
 main .contenedor .contBuscador .barra-busqueda input {
   background: transparent;
-  height: 60px;
+  height: 50px;
   flex: 1;
   border: 0;
   outline: none;
   padding: 24px 20px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #344f79;
 }
 main .contenedor .contBuscador .barra-busqueda button {
   margin-right: -20px;
   border: 0;
   border-radius: 0px 50% 50% 0px;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background: cornflowerbl;
   cursor: pointer;
 }
@@ -149,7 +151,7 @@ main .contenedor .contBuscador .barra-busqueda button:hover {
 main .contenedor .texto {
   color: rgb(255, 255, 255);
   text-align: center;
-  margin-top: 15px;
+  margin-top: 5px;
   width: 80%;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -387,7 +389,7 @@ main .enlinea p {
 
 .vender {
   color: white;
-  background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url(asset/img/bcknd-vta.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url("https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80") no-repeat center center fixed;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
