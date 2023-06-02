@@ -45,6 +45,7 @@ header nav .logo {
   width: 300px;
   height: 70px;
   margin-left: 50px;
+  align-self: center;
 }
 header nav .bar-btn {
   display: none;
@@ -179,7 +180,7 @@ main h2 {
   margin-bottom: 20px;
   font-family: "Montserrat", sans-serif;
 }
-main .box {
+main .box, main .box-2 {
   height: auto;
   width: 100%;
   display: flex;
@@ -189,7 +190,7 @@ main .box {
   align-items: none;
   gap: 40px 30px;
 }
-main .box .card {
+main .box .card, main .box-2 .card {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -200,30 +201,33 @@ main .box .card {
   border-radius: 10px;
   border: grey solid 0.1px;
 }
-main .box .card div {
+main .box .card a, main .box-2 .card a {
+  text-decoration: none;
+}
+main .box .card div, main .box-2 .card div {
   height: 200px;
   width: 100%;
 }
-main .box .card div .imgCard {
+main .box .card div .imgCard, main .box-2 .card div .imgCard {
   width: 100%;
   height: 200px;
   overflow: hidden;
   border-radius: 5px 5px 0px 0px;
 }
-main .box .card .leyenda {
+main .box .card .leyenda, main .box-2 .card .leyenda {
   height: auto;
   width: 100%;
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
-main .box .card .leyenda .desc-prop {
+main .box .card .leyenda .desc-prop, main .box-2 .card .leyenda .desc-prop {
   font-size: 14px;
   font-weight: 400;
   text-decoration: double;
   color: #344f79;
   padding: 5px 0 5px 0;
 }
-main .box .card .leyenda .tipo-op {
+main .box .card .leyenda .tipo-op, main .box-2 .card .leyenda .tipo-op {
   font-size: 12px;
   color: white;
   margin: 1px 20px;
@@ -231,7 +235,7 @@ main .box .card .leyenda .tipo-op {
   border-radius: 5px 5px 7px 7px;
   background-color: #344f79;
 }
-main .box .card .leyenda .barrio-prop {
+main .box .card .leyenda .barrio-prop, main .box-2 .card .leyenda .barrio-prop {
   font-size: 10px;
   color: white;
   background-color: #344f79;
@@ -239,7 +243,7 @@ main .box .card .leyenda .barrio-prop {
   border-radius: 5px 5px 8px 8px;
   padding: 2px 2px 5px 5px;
 }
-main .box .card .precio-prop {
+main .box .card .precio-prop, main .box-2 .card .precio-prop {
   font-style: bold;
   text-decoration: none;
   color: white;
@@ -248,7 +252,7 @@ main .box .card .precio-prop {
   padding: 1px 5px 1px 5px;
   border-radius: 5px 5px 10px 10px;
 }
-main .box .card:hover {
+main .box .card:hover, main .box-2 .card:hover {
   border: #344f79 solid 3px;
   transform: scale(1.05, 1.05);
   transition: 5ms;
@@ -437,6 +441,16 @@ main .enlinea p {
   margin: 30px 0px;
 }
 
+.tituloCompra {
+  font-family: "Montserrat", sans-serif;
+  background-color: #344f79;
+  color: white;
+  text-align: center;
+  margin: 20px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
 .moldeCompra {
   display: flex;
   flex-direction: column;
@@ -455,12 +469,18 @@ main .enlinea p {
   text-align: center;
   background-color: #344f79;
 }
-.moldeCompra .TituloCompra {
+.moldeCompra .tituloCompra {
   color: rgb(239, 241, 243);
   text-align: center;
   background-color: #344f79;
   border-radius: 5px;
   padding: 5px;
+}
+.moldeCompra .isightCompra {
+  width: 100%;
+}
+.moldeCompra .isightCompra p {
+  font-weight: 900;
 }
 .moldeCompra .contImgCompra {
   display: flex;
@@ -551,6 +571,122 @@ main .enlinea p {
   color: dark;
 }
 
+.moldeCompra {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+.moldeCompra div {
+  width: 80%;
+  gap: 10px;
+  margin: 10px auto 10px auto;
+}
+.moldeCompra div h2 {
+  color: rgb(239, 241, 243);
+  text-align: center;
+  background-color: #344f79;
+}
+.moldeCompra .tituloCompra {
+  color: rgb(239, 241, 243);
+  text-align: center;
+  background-color: #344f79;
+  border-radius: 5px;
+  padding: 5px;
+}
+.moldeCompra .contImgCompra {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.moldeCompra .contImgCompra img {
+  width: 700px;
+  border-radius: 5px;
+}
+.moldeCompra .contInsDatVendedor {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.moldeCompra .contInsDatVendedor div {
+  background-color: #344f79;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+.moldeCompra .datosVendedor {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  justify-content: center;
+  align-items: center;
+  border: #ffffff solid 0.2px;
+  list-style: none;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #344f79;
+  width: 200px;
+  height: 200px;
+}
+.moldeCompra .datosVendedor li img {
+  width: 40px;
+}
+.moldeCompra .tipo_Costo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  width: 150px;
+  height: 150px;
+}
+.moldeCompra .tipo_Costo li h2 {
+  border-radius: 5px;
+  border: #ffffff solid 1px;
+}
+.moldeCompra .whapp:hover {
+  width: 41px;
+  transition: 0.3s;
+}
+.moldeCompra .contDescCompleta {
+  border: #344f79 solid 1px;
+  color: #344f79;
+  height: auto;
+  text-align: left;
+  border-radius: 5px;
+}
+.moldeCompra .contDescCompleta p {
+  height: auto;
+  font-size: auto;
+}
+.moldeCompra ul {
+  list-style: none;
+}
+.moldeCompra a {
+  text-decoration: none;
+  color: dark;
+}
+.moldeCompra .isightCompra {
+  width: 100%;
+}
+.moldeCompra .isightCompra p {
+  font-weight: 900;
+}
+
 @media (max-width: 1024px) {
   .heroIndex {
     display: grid;
@@ -631,15 +767,6 @@ main .enlinea p {
   .contenedor .contBuscador #buscador {
     width: 500px;
   }
-  .enlace img {
-    width: 200px;
-  }
-  .inicio {
-    display: none;
-  }
-  .navbar li {
-    font-size: 0.9rem;
-  }
   .footer {
     font-size: 14px;
   }
@@ -675,9 +802,6 @@ main .enlinea p {
   .inicio {
     display: none;
   }
-  .enlace img {
-    width: 200px;
-  }
   .derechos p {
     font-size: 0.6rem;
     margin-bottom: 5px;
@@ -707,7 +831,7 @@ main .enlinea p {
     width: 300px;
   }
   .contenedor .texto h1 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   .trabaja {
     display: none;
@@ -727,14 +851,6 @@ main .enlinea p {
     justify-content: stretch;
     align-items: center;
     align-content: center;
-  }
-  .navbar {
-    gap: 10px;
-  }
-  .navbar a {
-    font-size: 0.7rem;
-    padding: 5px;
-    font-weight: 700;
   }
   .inicio {
     display: none;
@@ -765,6 +881,12 @@ main .enlinea p {
   }
   .enlinea h2 {
     font-size: 1rem;
+  }
+  main .container {
+    width: 80%;
+  }
+  .tituloCompra {
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 375px) {
