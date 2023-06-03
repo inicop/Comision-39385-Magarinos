@@ -25,13 +25,18 @@ Puedes ver el sitio web en [aquí](https://inicop.github.io/Comision-39385-Magar
 ## Capturas de pantalla
 
 ### Buscador
-<img width="1325" alt="image" src="https://github.com/inicop/Comision-39385-Magarinos/assets/131318903/87e31cbd-378b-4125-b7c0-094d93f79f42">
+<img width="1438" alt="image" src="https://github.com/inicop/Comision-39385-Magarinos/assets/131318903/fe42af58-4b60-4b0d-89e9-282a62f997f7">
+
 
 ### Destacados
-![image](https://github.com/inicop/Comision-39385-Magarinos/assets/131318903/7f3787b6-8b81-409a-a3dc-3b57c8f45a98)
+<img width="1410" alt="image" src="https://github.com/inicop/Comision-39385-Magarinos/assets/131318903/f115c4eb-06eb-43fc-96d6-e3ab2208636d">
 
 
-### Propiedades
+### Propiedades a la venta
+<img width="1424" alt="image" src="https://github.com/inicop/Comision-39385-Magarinos/assets/131318903/c1f854f8-235a-4c0d-9495-4428c6ad22b7">
+
+
+### Propiedad a la venta
 <img width="1434" alt="image" src="https://github.com/inicop/Comision-39385-Magarinos/assets/131318903/ba82be39-ccf4-4c59-b379-964ce819438d">
 
 
