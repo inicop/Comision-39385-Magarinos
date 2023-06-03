@@ -1,12 +1,14 @@
 header {
     width: 100%;
     background-color: #ffffff;
+    grid-area: header;
 
 
     nav {
         height: 100px;
         width: 100%;
         @include flex(row, wrap, space-between, center);
+        
 
 
         .logo {
@@ -46,16 +48,16 @@ header {
                     color: $color-base;
                     font-size: .9rem;
 
-                    &:hover {
+                    &:hover,a.active {
                         color: rgb(84, 137, 223);
                         transition: .3s;
                     }
                 }
 
-                a.active {
-                    color: rgb(84, 137, 223);
-                    transition: .3s;
-                }
+                 a.active {
+                     color: rgb(84, 137, 223);
+                     transition: .3s;
+                 }
             }
         }
 

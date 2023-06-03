@@ -7,16 +7,16 @@
     header {
         width: 100%;
         background-color: #ffffff;
-        
+
         //border-style: none none none solid;
         //border-color: #344f79;
         //border-width: 1px;
 
         nav {
-            
+
             width: 100%;
             @include flex(row, wrap, space-between, center);
-            
+
 
             .logo {
                 width: 300px;
@@ -59,15 +59,16 @@
                         text-transform: uppercase;
                         font-weight: bold;
 
-                        &:hover {
+                        &:hover, &:active {
                             color: rgb(84, 137, 223);
                             transition: .3s;
                         }
-                    }
 
-                    a.active {
-                        color: rgb(84, 137, 223);
-                        transition: .3s;
+
+                        // .active {
+                        //     color: rgb(84, 137, 223);
+                        //     transition: .3s;
+                        // }
                     }
                 }
             }
@@ -76,12 +77,12 @@
                 display: none;
             }
 
-            #check:checked ~ .nav-menu {
+            #check:checked~.nav-menu {
                 height: 86vh;
                 position: absolute;
             }
 
-            #check:checked ~ .nav-menu li {
+            #check:checked~.nav-menu li {
                 display: block;
             }
 
@@ -100,7 +101,7 @@
 
     }
 
-   
+
 
 
     .footer {

@@ -31,6 +31,7 @@
 header {
   width: 100%;
   background-color: #ffffff;
+  grid-area: header;
 }
 header nav {
   height: 100px;
@@ -75,7 +76,7 @@ header nav .nav-menu li a {
   color: #344f79;
   font-size: 0.9rem;
 }
-header nav .nav-menu li a:hover {
+header nav .nav-menu li a:hover, header nav .nav-menu li a a.active {
   color: rgb(84, 137, 223);
   transition: 0.3s;
 }
@@ -746,11 +747,7 @@ main .enlinea p {
     text-transform: uppercase;
     font-weight: bold;
   }
-  header nav .nav-menu li a:hover {
-    color: rgb(84, 137, 223);
-    transition: 0.3s;
-  }
-  header nav .nav-menu li a.active {
+  header nav .nav-menu li a:hover, header nav .nav-menu li a:active {
     color: rgb(84, 137, 223);
     transition: 0.3s;
   }
