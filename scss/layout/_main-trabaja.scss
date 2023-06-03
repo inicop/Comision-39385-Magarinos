@@ -31,7 +31,7 @@ main {
         border-color: black solid 3px;
 
         p {
-            background-color: #344f79;
+            background-color: $color-base;
             width: 50%;
             color: white;
             font-family: $typo-secundaria;
