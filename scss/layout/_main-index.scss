@@ -105,6 +105,9 @@ main {
         width: 100%;
         @include flex(row, wrap, center, none);
         gap: 40px 30px;
+    
+
+
 
         .card {
             @include flex(column, nowrap, none, center);
@@ -112,19 +115,55 @@ main {
             width: 300px;
             border-radius: 10px;
             border: grey solid 0.1px;
-            a{
+            overflow: hidden;
+           
+
+            a {
                 text-decoration: none;
             }
 
             div {
                 height: 200px;
                 width: 100%;
+                position: relative;
+                font-size: .8rem;;
+                font-family: $typo-secundaria;
 
                 .imgCard {
                     width: 100%;
                     height: 200px;
-                    overflow: hidden;
-                    border-radius: 5px 5px 0px 0px;
+                }
+                .precio-prop {
+                    
+                    font-style: bold;
+                    text-decoration: none;
+                    color: white;
+                    font-weight:bolder;
+                    background-color: rgb(52, 79, 121,0.9);
+                    padding: 5px;
+                    border-radius: 5px;
+
+                    position: absolute;
+                    bottom:0;
+                    right: 0;
+                    margin: 5px;
+                    
+                }
+                .tipo-op {
+                    font-weight:bolder;
+                    font-style: bold;
+                    font-size: 12px;
+                    color: white;
+                    padding: 5px;
+                    margin: 5px;
+                    border-radius: 5px;
+                    background-color: rgb(52, 79, 121,0.7);
+                    
+                    position: absolute;
+                    bottom:0;
+                    left: 0;
+                    margin: 5px;
+
                 }
             }
 
@@ -136,8 +175,9 @@ main {
                 text-align: center;
                 font-family: $typo-secundaria;
 
-                 .desc-prop{
-                    font-size: 14px;
+                .desc-prop {
+                    margin: 5px;
+                    font-size: .9rem;
                     font-weight: 400;
                     text-decoration: double;
                     color: #344f79;
@@ -145,40 +185,20 @@ main {
 
                 }
 
-                .tipo-op {
-                    font-size: 12px;
-                    color: white;
-                    margin: 1px 20px;
-                    padding: 2px 2px 5px 5px;
-                    border-radius: 5px 5px 7px 7px;
-                    background-color: #344f79;
-
-                }
+                
 
                 .barrio-prop {
-                    font-size: 10px;
+                    font-size: .9rem;
                     color: white;
                     background-color: $color-base;
                     margin: 3px 40px;
-                    border-radius: 5px 5px 8px 8px;
-                    padding: 2px 2px 5px 5px;
+                    border-radius:5px;
+                    margin-top: 10px;
+                    padding: 5px;
 
                 }
 
             }
-
-            .precio-prop {
-                
-                font-style: bold;
-                text-decoration: none;
-                color: white;
-                font-weight: bolder;
-                background-color: $color-base;
-                padding: 1px 5px 1px 5px;
-                border-radius: 5px 5px 10px 10px;
-
-            }
-
 
 
             &:hover {
