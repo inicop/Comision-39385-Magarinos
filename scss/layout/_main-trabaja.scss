@@ -1,0 +1,47 @@
+main {
+
+    grid-area: main;
+    .principalTrabaja {
+        @include flex(row,wrap,space-around,center);
+        border-color: black solid 3px;
+        width: 100%;
+        flex-grow: 10px;
+        align-content: center;
+
+        .subPrincipalTrabaja {
+            width: 100%;
+
+            div {
+                img {
+                    width: 300px;
+                    height: 200px;
+                    margin-bottom: 10px;
+                    border-radius: 10px;
+                }
+            }
+
+        }
+
+    }
+
+    .enlinea {
+        width: 100%;
+        gap: 20px;
+        @include flex(row,nowrap,center,center);
+        border-color: black solid 3px;
+
+        p {
+            background-color: $color-base;
+            width: 50%;
+            color: white;
+            font-family: $typo-secundaria;
+            font-size: 14px;
+            text-justify: auto;
+            border-radius: 10px;
+            padding: 10px;
+            
+        }
+
+        
+    }
+}

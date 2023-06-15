@@ -1,44 +1,78 @@
-    header {
-        grid-area: header;
-        @include grid(0.3fr auto 0.2fr, auto,space-between, center, "enlace navbar inicio");
-        background-color: #ffffff;
-        font-family: $typo-secundaria;
+header {
+    width: 100%;
+    background-color: #ffffff;
+    grid-area: header;
 
-        div {
-            a {
-                img {}
-            }
+
+    nav {
+        height: 100px;
+        width: 100%;
+        @include flex(row, wrap, space-between, center);
+        
+
+
+        .logo {
+            width: 300px;
+            height: 70px;
+            margin-left: 50px;
+            align-self: center;
+
         }
 
-        nav {
-            ul {
-                @include flex(row, nowrap, space-between, center);
-                gap: 25px;
+        .bar-btn {
+            display: none;
 
-                li {
-                    list-style: none;
+        }
 
-                    a {
-                        text-decoration: none;
-                        color: $color-base;
-                        font-size: .9rem;
+        .nav-menu {
+            position: relative;
+            height: 100px;
+            top: 0px;
+            background: none;
+            transition: none;
+            text-align: right;
+            margin-right: 50px;
+            font-family: $typo-secundaria;
+            text-decoration: none;
+            color: $color-base;
+            font-size: .9rem;
+
+            li {
+                display: inline-block;
+                line-height: 100px;
+                margin: 0 20px;
+                transition: none;
+                list-style: none;
+                a {
+                    text-decoration: none;
+                    color: $color-base;
+                    font-size: .9rem;
+
+                    &:hover,a.active {
+                        color: rgb(84, 137, 223);
+                        transition: .3s;
                     }
                 }
+
+                 a.active {
+                     color: rgb(84, 137, 223);
+                     transition: .3s;
+                 }
             }
         }
 
-        div {
-            ul {
-                li {
-                    list-style: none;
-
-                    a {
-                        text-decoration: none;
-                        color: $color-base;
-                        font-size: .9rem;
-                        font-weight: 700;
-                    }
-                }
-            }
+        #check {
+            display: none;
         }
+
+        #check:checked~.nav-menu {
+            height: 86vh;
+            position: absolute;
+        }
+
+        #check:checked~.nav-menu li {
+            display: block;
+        }
+
     }
+}

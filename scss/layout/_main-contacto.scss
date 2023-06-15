@@ -1,0 +1,23 @@
+main {
+    //border-style: solid none none none;
+    //border-color: rgb(228, 228, 234);
+    //border-width: 1px;
+
+
+    .container {
+        width: 50%;
+
+
+    }
+
+    .form-lable {
+        color: $color-base;
+        font-family: $typo-secundaria;
+        font-weight: 500;
+    }
+
+    .form-Check {
+        @extend .form-lable;
+
+    }
+}

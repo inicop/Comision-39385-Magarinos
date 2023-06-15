@@ -1,0 +1,68 @@
+@media(max-width:375px) {
+
+    .navbar {
+        @include flex(row, nowrap, space-between, center);
+
+        li {
+            gap: 10px;
+            font-size: .6rem;
+        }
+    }
+
+    .header {
+        @include flex(column, wrap, space-between, center);
+        align-content: center;
+        .logo{
+            width: 200px;
+            height: 60px;
+        }
+
+    }
+
+    .card {
+        height: 200px;
+        width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .leyenda {
+        height: 100px;
+
+    }
+
+    /* Desc */
+    .leyenda h3 {
+        margin: -3px;
+        font-size: 11px;
+
+    }
+
+    /*Tipo (Alquiler o venta)*/
+    .leyenda h4 {
+        margin-top: 4px;
+        font-size: 10px;
+        color: rgb(52, 79, 121);
+    }
+
+    /*Ubicacion*/
+    .leyenda h5 {
+        margin: 2px;
+        font-size: 10x;
+
+
+    }
+
+    /*Costo*/
+    .leyenda a {
+        font-size: 16px;
+        text-decoration: solid;
+        text-decoration: none;
+        color: #fff;
+        background-color: #344f79;
+        height: 90%;
+        border-radius: 5px;
+        padding: 2px 2px;
+
+    }
+
+}

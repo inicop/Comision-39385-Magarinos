@@ -1,0 +1,81 @@
+@media(max-width:425px) {
+
+    .contenedor {
+
+        .contBuscador {
+
+            #buscador {
+                width: 300px;
+            }
+        }
+
+        .texto h1 {
+            font-size: .7rem;
+        }
+    }
+
+    .trabaja {
+        display: none;
+    }
+
+    .heroIndex {
+        @include grid(100%, auto auto auto, none, none, "header" "main" "footer");
+    }
+
+    .header {
+        @include flex(column, wrap, stretch, center);
+        align-content: center;
+
+    }
+
+
+    .inicio {
+        display: none;
+    }
+
+    .enlace img {
+        width: 200px;
+
+    }
+
+    .derechos p {
+        font-size: .6rem;
+        margin-bottom: 5px;
+    }
+
+    .footer {
+        @include flex(column, nowrap, center, stretch);
+        font-size: 12px;
+    }
+
+    .contacto li a img {
+        width: 20px;
+    }
+
+    .seguinos li a img {
+        width: 20px;
+    }
+
+    .phone li img {
+        width: 20px;
+    }
+
+    .enlinea {
+        h2 {
+            font-size: 1rem;
+        }
+    }
+
+    main .container {
+        width: 80%;
+
+    }
+
+    .tituloCompra {
+       font-size: .8rem;
+    
+    }
+
+    
+
+}

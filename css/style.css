@@ -15,7 +15,7 @@
   box-sizing: border-box;
 }
 
-.heroIndex {
+.hero {
   width: 100%;
   height: 100%;
   display: grid;
@@ -24,52 +24,164 @@
   justify-content: none;
   align-items: none;
   grid-template-areas: "header" "main" "footer";
+  justify-content: center;
+  align-items: center;
 }
 
 header {
-  grid-area: header;
-  display: grid;
-  grid-template-columns: 0.3fr auto 0.2fr;
-  grid-template-rows: auto;
-  justify-content: space-between;
-  align-items: center;
-  grid-template-areas: "enlace navbar inicio";
+  width: 100%;
   background-color: #ffffff;
-  font-family: "Montserrat", sans-serif;
+  grid-area: header;
 }
-header nav ul {
+header nav {
+  height: 100px;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 25px;
 }
-header nav ul li {
-  list-style: none;
+header nav .logo {
+  width: 300px;
+  height: 70px;
+  margin-left: 50px;
+  align-self: center;
 }
-header nav ul li a {
+header nav .bar-btn {
+  display: none;
+}
+header nav .nav-menu {
+  position: relative;
+  height: 100px;
+  top: 0px;
+  background: none;
+  transition: none;
+  text-align: right;
+  margin-right: 50px;
+  font-family: "Montserrat", sans-serif;
   text-decoration: none;
   color: #344f79;
   font-size: 0.9rem;
 }
-header div ul li {
+header nav .nav-menu li {
+  display: inline-block;
+  line-height: 100px;
+  margin: 0 20px;
+  transition: none;
   list-style: none;
 }
-header div ul li a {
+header nav .nav-menu li a {
   text-decoration: none;
   color: #344f79;
   font-size: 0.9rem;
-  font-weight: 700;
+}
+header nav .nav-menu li a:hover, header nav .nav-menu li a a.active {
+  color: rgb(84, 137, 223);
+  transition: 0.3s;
+}
+header nav .nav-menu li a.active {
+  color: rgb(84, 137, 223);
+  transition: 0.3s;
+}
+header nav #check {
+  display: none;
+}
+header nav #check:checked ~ .nav-menu {
+  height: 86vh;
+  position: absolute;
+}
+header nav #check:checked ~ .nav-menu li {
+  display: block;
 }
 
 main {
-  border-style: solid none none none;
-  border-color: #344f79;
-  border-width: 1px;
   grid-area: main;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
-main .box {
+main .contenedor {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, rgba(44, 44, 44, 0.5), rgba(54, 54, 54, 0.5019607843)), url("https://images.unsplash.com/photo-1676164539863-612beb931dfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80");
+  background-size: cover;
+  background-position: center center;
+}
+main .contenedor .contBuscador {
+  width: 100%;
+  height: auto;
+  height: 60px;
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+main .contenedor .contBuscador .barra-busqueda {
+  width: 100%;
+  height: 50px;
+  max-width: 700px;
+  min-width: 300px;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: none;
+  align-items: center;
+  border-radius: 50px;
+  padding: 0px 20px;
+}
+main .contenedor .contBuscador .barra-busqueda input {
+  background: transparent;
+  height: 50px;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 24px 20px;
+  font-size: 0.9rem;
+  color: #344f79;
+}
+main .contenedor .contBuscador .barra-busqueda button {
+  margin-right: -20px;
+  border: 0;
+  border-radius: 0px 50% 50% 0px;
+  width: 50px;
+  height: 50px;
+  background: cornflowerbl;
+  cursor: pointer;
+}
+main .contenedor .contBuscador .barra-busqueda button img {
+  width: 20px;
+}
+main .contenedor .contBuscador .barra-busqueda button:hover {
+  transform: scale(1.05, 1.05);
+  transition: 5ms;
+}
+main .contenedor .texto {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-top: 5px;
+  width: 80%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+main h2 {
+  color: #344f79;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: double;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+main .box, main .box-2 {
   height: auto;
   width: 100%;
   display: flex;
@@ -79,7 +191,7 @@ main .box {
   align-items: none;
   gap: 40px 30px;
 }
-main .box .card {
+main .box .card, main .box-2 .card {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -89,60 +201,79 @@ main .box .card {
   width: 300px;
   border-radius: 10px;
   border: grey solid 0.1px;
-}
-main .box .card .imgCard {
-  font-family: "Montserrat", sans-serif;
-  height: 100%;
-  width: 100%;
   overflow: hidden;
-  border-radius: 10px 10px 0 0;
 }
-main .box .card .leyenda {
+main .box .card a, main .box-2 .card a {
+  text-decoration: none;
+}
+main .box .card div, main .box-2 .card div {
   height: 200px;
+  width: 100%;
+  position: relative;
+  font-size: 0.8rem;
+  font-family: "Montserrat", sans-serif;
+}
+main .box .card div .imgCard, main .box-2 .card div .imgCard {
+  width: 100%;
+  height: 200px;
+}
+main .box .card div .precio-prop, main .box-2 .card div .precio-prop {
+  font-style: bold;
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  background-color: rgba(52, 79, 121, 0.9);
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 5px;
+}
+main .box .card div .tipo-op, main .box-2 .card div .tipo-op {
+  font-weight: bolder;
+  font-style: bold;
+  font-size: 12px;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: rgba(52, 79, 121, 0.7);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 5px;
+}
+main .box .card .leyenda, main .box-2 .card .leyenda {
+  height: auto;
   width: 100%;
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
-main .box .card .leyenda h3 {
-  font-size: 14px;
+main .box .card .leyenda .desc-prop, main .box-2 .card .leyenda .desc-prop {
+  margin: 5px;
+  font-size: 0.9rem;
   font-weight: 400;
   text-decoration: double;
   color: #344f79;
   padding: 5px 0 5px 0;
 }
-main .box .card .leyenda h4 {
-  font-size: 12px;
-  color: white;
-  margin: 1px 20px;
-  padding: 2px 2px 5px 5px;
-  border-radius: 5px 5px 7px 7px;
-  background-color: #344f79;
-}
-main .box .card .leyenda h5 {
-  font-size: 10px;
+main .box .card .leyenda .barrio-prop, main .box-2 .card .leyenda .barrio-prop {
+  font-size: 0.9rem;
   color: white;
   background-color: #344f79;
   margin: 3px 40px;
-  border-radius: 5px 5px 8px 8px;
-  padding: 2px 2px 5px 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 5px;
 }
-main .box .card .leyenda a {
-  font-style: bold;
-  text-decoration: none;
-  color: white;
-  font-weight: bolder;
-  background-color: #344f79;
-  padding: 1px 5px 1px 5px;
-  border-radius: 5px 5px 10px 10px;
-}
-main .box .card:hover {
+main .box .card:hover, main .box-2 .card:hover {
   border: #344f79 solid 3px;
   transform: scale(1.05, 1.05);
   transition: 5ms;
 }
 
 footer {
-  margin-top: 100px;
   background-color: #e9edf1;
   grid-area: footer;
   font-family: "Montserrat", sans-serif;
@@ -218,6 +349,632 @@ footer .icono-footer {
 footer .icono-footer:hover {
   transform: scale(1.05, 1.05);
   /* transition: 0.3s; */
+}
+
+.btn, .btn-trabaja {
+  background-color: #344f79;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  border-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+.btn:hover, .btn-trabaja:hover {
+  border: white solid 3px;
+  background: #475e83;
+  transform: scale(1.05, 1.05);
+  transition: 5ms;
+}
+
+main .container {
+  width: 50%;
+}
+main .form-lable, main .form-Check {
+  color: #344f79;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+main {
+  grid-area: main;
+}
+main .principalTrabaja {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border-color: black solid 3px;
+  width: 100%;
+  flex-grow: 10px;
+  align-content: center;
+}
+main .principalTrabaja .subPrincipalTrabaja {
+  width: 100%;
+}
+main .principalTrabaja .subPrincipalTrabaja div img {
+  width: 300px;
+  height: 200px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+main .enlinea {
+  width: 100%;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  border-color: black solid 3px;
+}
+main .enlinea p {
+  background-color: #344f79;
+  width: 50%;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  text-justify: auto;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.vender {
+  grid-area: main;
+  color: white;
+  background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url("https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80") no-repeat center center fixed;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+.vender h1 {
+  margin: 30px 30px;
+  width: 80%;
+  text-align: center;
+  font-size: calc(1em + 1vw);
+}
+.vender p {
+  width: 80%;
+  height: auto;
+  text-align: justify;
+  padding: 20px 20px;
+  background-color: #344f79;
+  border-radius: 5px;
+  color: rgb(243, 242, 242);
+  font-size: 14px;
+  border: solid 0.01px;
+  border-color: white;
+}
+.vender p strong {
+  font-size: 1rem;
+}
+.vender div a input {
+  margin: 30px 0px;
+}
+
+.tituloCompra {
+  font-family: "Montserrat", sans-serif;
+  background-color: #344f79;
+  color: white;
+  text-align: center;
+  margin: 20px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.moldeCompra {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+.moldeCompra div {
+  width: 80%;
+  gap: 10px;
+  margin: 10px auto 10px auto;
+}
+.moldeCompra div h2 {
+  color: rgb(239, 241, 243);
+  text-align: center;
+  background-color: #344f79;
+}
+.moldeCompra .tituloCompra {
+  color: rgb(239, 241, 243);
+  text-align: center;
+  background-color: #344f79;
+  border-radius: 5px;
+  padding: 5px;
+}
+.moldeCompra .isightCompra {
+  width: 100%;
+}
+.moldeCompra .isightCompra p {
+  font-weight: 900;
+}
+.moldeCompra .contImgCompra {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.moldeCompra .contImgCompra img {
+  width: 700px;
+  border-radius: 5px;
+}
+.moldeCompra .contInsDatVendedor {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.moldeCompra .contInsDatVendedor div {
+  background-color: #344f79;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+.moldeCompra .contInsDatVendedor div .tipo_Costo {
+  order: 3;
+}
+.moldeCompra .datosVendedor {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  justify-content: center;
+  align-items: center;
+  border: #ffffff solid 0.2px;
+  list-style: none;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #344f79;
+  width: 200px;
+  height: 200px;
+}
+.moldeCompra .datosVendedor li img {
+  width: 40px;
+}
+.moldeCompra .tipo_Costo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  width: 200px;
+  height: 200px;
+}
+.moldeCompra .tipo_Costo li h2 {
+  padding: 10px;
+  border-radius: 5px;
+  border: #ffffff solid 1px;
+}
+.moldeCompra .whapp:hover {
+  width: 41px;
+  transition: 0.3s;
+}
+.moldeCompra .contDescCompleta {
+  border: #344f79 solid 1px;
+  color: #344f79;
+  height: auto;
+  text-align: left;
+  border-radius: 5px;
+}
+.moldeCompra .contDescCompleta p {
+  height: auto;
+  font-size: auto;
+}
+.moldeCompra ul {
+  list-style: none;
+}
+.moldeCompra a {
+  text-decoration: none;
+  color: dark;
+}
+
+.moldeCompra {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+.moldeCompra div {
+  width: 80%;
+  gap: 10px;
+  margin: 10px auto 10px auto;
+}
+.moldeCompra div h2 {
+  color: rgb(239, 241, 243);
+  text-align: center;
+  background-color: #344f79;
+}
+.moldeCompra .tituloCompra {
+  color: rgb(239, 241, 243);
+  text-align: center;
+  background-color: #344f79;
+  border-radius: 5px;
+  padding: 5px;
+}
+.moldeCompra .contImgCompra {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.moldeCompra .contImgCompra img {
+  width: 700px;
+  border-radius: 5px;
+}
+.moldeCompra .contInsDatVendedor {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.moldeCompra .contInsDatVendedor div {
+  background-color: #344f79;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+.moldeCompra .datosVendedor {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  justify-content: center;
+  align-items: center;
+  border: #ffffff solid 0.2px;
+  list-style: none;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #344f79;
+  width: 200px;
+  height: 200px;
+}
+.moldeCompra .datosVendedor li img {
+  width: 40px;
+}
+.moldeCompra .tipo_Costo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  width: 150px;
+  height: 150px;
+}
+.moldeCompra .tipo_Costo li h2 {
+  border-radius: 5px;
+  border: #ffffff solid 1px;
+}
+.moldeCompra .whapp:hover {
+  width: 41px;
+  transition: 0.3s;
+}
+.moldeCompra .contDescCompleta {
+  border: #344f79 solid 1px;
+  color: #344f79;
+  height: auto;
+  text-align: left;
+  border-radius: 5px;
+}
+.moldeCompra .contDescCompleta p {
+  height: auto;
+  font-size: auto;
+}
+.moldeCompra ul {
+  list-style: none;
+}
+.moldeCompra a {
+  text-decoration: none;
+  color: dark;
+}
+.moldeCompra .isightCompra {
+  width: 100%;
+}
+.moldeCompra .isightCompra p {
+  font-weight: 900;
+}
+
+@media (max-width: 1024px) {
+  .heroIndex {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    justify-content: none;
+    align-items: none;
+    grid-template-areas: "header" "main" "footer";
+  }
+  header {
+    width: 100%;
+    background-color: #ffffff;
+  }
+  header nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav .logo {
+    width: 300px;
+    height: 70px;
+    margin-left: 20px;
+  }
+  header nav .bar-btn {
+    display: inline;
+    font-size: 1.9rem;
+    margin-right: 20px;
+    color: #344f79;
+    cursor: pointer;
+  }
+  header nav .nav-menu {
+    position: fixed;
+    width: 100%;
+    height: 0px;
+    top: 100px;
+    background-color: #344f79;
+    text-align: center;
+    transition: all 0.5s;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  header nav .nav-menu li {
+    list-style: none;
+    display: none;
+    line-height: 30px;
+    margin: 50px 0px;
+    transition: all 0.5s;
+  }
+  header nav .nav-menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  header nav .nav-menu li a:hover, header nav .nav-menu li a:active {
+    color: rgb(84, 137, 223);
+    transition: 0.3s;
+  }
+  header nav #check {
+    display: none;
+  }
+  header nav #check:checked ~ .nav-menu {
+    height: 86vh;
+    position: absolute;
+  }
+  header nav #check:checked ~ .nav-menu li {
+    display: block;
+  }
+  .contenedor .contBuscador #buscador {
+    width: 500px;
+  }
+  .footer {
+    font-size: 14px;
+  }
+  .contacto li a img {
+    width: 20px;
+  }
+  .seguinos li a img {
+    width: 20px;
+  }
+  .phone li .tel {
+    width: 20px;
+  }
+  .phone li p {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .contenedor .contBuscador #buscador {
+    width: 400px;
+  }
+  .contenedor .texto h1 {
+    font-size: 0.9rem;
+  }
+  .heroIndex {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    justify-content: none;
+    align-items: none;
+    grid-template-areas: "header" "main" "footer";
+  }
+  .inicio {
+    display: none;
+  }
+  .derechos p {
+    font-size: 0.6rem;
+    margin-bottom: 5px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    font-size: 12px;
+  }
+  .subPrincipalTrabaja .enlinea {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+  }
+  .subPrincipalTrabaja .enlinea p {
+    width: 80%;
+  }
+}
+@media (max-width: 425px) {
+  .contenedor .contBuscador #buscador {
+    width: 300px;
+  }
+  .contenedor .texto h1 {
+    font-size: 0.7rem;
+  }
+  .trabaja {
+    display: none;
+  }
+  .heroIndex {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    justify-content: none;
+    align-items: none;
+    grid-template-areas: "header" "main" "footer";
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    align-items: center;
+    align-content: center;
+  }
+  .inicio {
+    display: none;
+  }
+  .enlace img {
+    width: 200px;
+  }
+  .derechos p {
+    font-size: 0.6rem;
+    margin-bottom: 5px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    font-size: 12px;
+  }
+  .contacto li a img {
+    width: 20px;
+  }
+  .seguinos li a img {
+    width: 20px;
+  }
+  .phone li img {
+    width: 20px;
+  }
+  .enlinea h2 {
+    font-size: 1rem;
+  }
+  main .container {
+    width: 80%;
+  }
+  .tituloCompra {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 375px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar li {
+    gap: 10px;
+    font-size: 0.6rem;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+  .header .logo {
+    width: 200px;
+    height: 60px;
+  }
+  .card {
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  .leyenda {
+    height: 100px;
+  }
+  /* Desc */
+  .leyenda h3 {
+    margin: -3px;
+    font-size: 11px;
+  }
+  /*Tipo (Alquiler o venta)*/
+  .leyenda h4 {
+    margin-top: 4px;
+    font-size: 10px;
+    color: rgb(52, 79, 121);
+  }
+  /*Ubicacion*/
+  .leyenda h5 {
+    margin: 2px;
+    font-size: 10x;
+  }
+  /*Costo*/
+  .leyenda a {
+    font-size: 16px;
+    text-decoration: solid;
+    text-decoration: none;
+    color: #fff;
+    background-color: #344f79;
+    height: 90%;
+    border-radius: 5px;
+    padding: 2px 2px;
+  }
+}
+@media (max-width: 320px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1px;
+  }
+  .contenedor .contBuscador #buscador {
+    width: 250px;
+  }
+  .contenedor .texto h1 {
+    font-size: 0.8rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

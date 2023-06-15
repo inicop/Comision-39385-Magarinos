@@ -1,0 +1,13 @@
+.box-2 {
+    @extend .box;
+}
+
+.tituloCompra {
+    font-family: $typo-secundaria;
+    background-color: $color-base;
+    color: white;
+    text-align: center;
+    margin: 20px;
+    border-radius: 5px;
+    padding: 10px;
+}

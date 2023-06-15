@@ -1,0 +1,27 @@
+@media(max-width:320px) {
+
+
+    
+
+  .navbar{
+    @include flex(row, nowrap, space-between, center);
+    gap: 1px;
+  }
+
+    .contenedor {
+
+        .contBuscador {
+
+            #buscador {
+                width: 250px;
+            }
+        }
+
+        .texto h1 {
+            font-size: .8rem;
+        }
+    }
+
+
+
+}
